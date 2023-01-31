@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=”utf-8” />
+    <title>Java script</title>
+<script>
+        var num = 10;
+        var name = "ARTG";
+
+        //print command: displaying /printing the value of num
+        console.log(name);
+        
+        var addtion = num + 10;
+
+        num = num + 10;
+        console.log(num);
+
+        console.log(num+10);
+
+        console.log(name + "5338");
+
+        //判断真假
+
+        //比较大小
+        var isbigger = num > 100;
+        console.log(isbigger);
+
+        var i = 1
+        1+i
+        console.log(i);
+
+        //Array type 这里储存了四个东西
+        // key vaulepairs
+        var users = ["Northeastern", 10, "ARTG", 100];
+        console.log(users[0]);
+
+        var newobject = {
+            name: "Holmos",
+            color:"Green",
+            street: "dontcare",
+            zip: "02215",
+            greetings:function(name){
+                console.log("Hey" + name + "!")}
+        }
+        console.log(newobject.greetings("Alex"));
+
+        //不同种类的功能
+        //没有输入的功能
+        var printHello = function(){
+            console.log("hello world");
+        }
+        printHello();
+
+        var printname = function(name){
+            console.log("Hello"+name);
+        }
+        printname("sir");
+
+        var addvalue = function(val1,val2){
+            let sum = val1 + val2;
+            return sum
+        }
+        var myResult = addvalue(10,10);
+
+        console.log(myResult);
+
+        var expvalue = function(val1,val2){
+            let exp = val1**2;
+            return exp
+        }
+        var myResult = expvalue(10,10);
+
+        console.log(myResult);
+        //好想吃炸鸡啊啊啊啊啊啊啊啊啊啊啊啊
+
+        //conditional statements are if alse statement
+        var condVal = 10;
+        if (condVal <= 10){
+            console.log("This is not too bad.");
+        } else if (condVal == 15) {
+            console.log("This is so bad.");
+        } else {
+            console.log("idk");
+        }
+
+        var greaterthenten = function(){
+            if (val > 10){
+                console.log("Yes");
+            } else if (val == 10){
+                console.log("no");
+            } else {
+                val++;
+            }
+            console.log(val);
+            return val;
+        }
+
+        //get a number
+        // var num = prompt("give me a number");
+        //check if they are numbers
+        function isRealNum(num){
+            if(num ===""|| num ==null){
+                return false,
+                console.log("It's not a number");
+            }
+            if(isNaN(num)){
+                return true,
+                console.log(Math.sqrt(num));
+            }
+            else{
+                return false,console.log("it's not a number");
+            }
+            }
+            
+
+
+
+
+
+
+ </script>
+ <script>
+    //document.getElementById["HL"].innerHTML = "Changed the text";
+    //document.getElementById["HL"].style.color = "green";
+ </script>
+
+</head>
+<!-- 有三种JS 行内 内嵌 外部 -->
+
+<!-- <body> -->
+<!-- 1.行内式：直接写道元素内部 -->
+<!-- <input type="button" value="点击我" onclick="alert('点的好')">
+</body> -->
+<body>
+<!-- 2.内嵌式 -->
+<!-- <script>//小弹窗显示 aleart
+    alert('你好');
+ </script> -->
+ <!-- 3.外部式 -->
+ <script src="第三种JS.js"></script>
+</body>
+<body>
+<script>
+    //JS中的输入输出 
+    // 弹出警示框alert()
+    // 浏览器控制台打印输出console.log()
+    // 弹出输入框 用户可以输入 prompt()
+</script>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>

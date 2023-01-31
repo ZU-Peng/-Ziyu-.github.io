@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=”utf-8” />
+    <title>Homework 01-24</title>
+<script>
+ function zodiac(){
+            var age = prompt('What is your age in 2023?');
+            var zodiacage;
+            if(isNaN(age)){alert("please input a number");
+        }else{age=parseFloat(age);
+            if(age>=12){
+            let zodiacage = age % 12;
+            switch (zodiacage){
+                case 0:
+                    alert("Your Chinese zodiac is Rabbit");
+                    break;
+                case 1:
+                    alert("Your Chinese zodiac is Tiger");
+                    break;
+                case 2:
+                alert("Your Chinese zodiac is Cattle");
+                    break;
+                case 3:
+                alert("Your Chinese zodiac is Mouse");
+                    break;
+                case 4:
+                alert("Your Chinese zodiac is Pig");
+                    break;
+                case 5:
+                alert("Your Chinese zodiac is Dog");
+                    break;
+                case 6:
+                alert("Your Chinese zodiac is Chicken");
+                    break;
+                case 7:
+                alert("Your Chinese zodiac is Monkey");
+                    break;
+                case 8:
+                alert("Your Chinese zodiac is Sheep");
+                    break;
+                case 9:
+                alert("Your Chinese zodiac is Horse");
+                    break;
+                case 10:
+                alert("Your Chinese zodiac is Snake");
+                    break;
+                case 11:
+                alert("Your Chinese zodiac is Dragon");
+                    break;
+            
+                    default:
+                        break;
+            }
+            }else{
+                switch (age){
+                case 0:
+                alert("Your Chinese zodiac is Rabbit");
+                    break;
+                case 1:
+                alert("Your Chinese zodiac is Tiger");
+                    break;
+                case 2:
+                alert("Your Chinese zodiac is Cattle");
+                    break;
+                case 3:
+                alert("Your Chinese zodiac is Mouse");
+                    break;
+                case 4:
+                alert("Your Chinese zodiac is Pig");
+                    break;
+                case 5:
+                alert("Your Chinese zodiac is Dog");
+                    break;
+                case 6:
+                alert("Your Chinese zodiac is Chicken");
+                    break;
+                case 7:
+                alert("Your Chinese zodiac is Monkey");
+                    break;
+                case 8:
+                alert("Your Chinese zodiac is Sheep");
+                    break;
+                case 9:
+                alert("Your Chinese zodiac is Horse");
+                    break;
+                case 10:
+                alert("Your Chinese zodiac is Snake");
+                    break;
+                case 11:
+                alert("Your Chinese zodiac is Dragon");
+                    break;
+            
+                    default:
+                        break;
+                }
+            }
+        }
+    }
+
+
+</script>
+
+</head>
+<body>
+    <script>
+    alert('Your Chinese Zodiac Finder');
+    </script>
+    <input type="button" value="click here to find out your Chinese Zodiac" onclick="zodiac ()">
+
+</body>
+</html>
