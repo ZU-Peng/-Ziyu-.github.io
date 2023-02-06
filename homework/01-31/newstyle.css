@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body
+{
+    height:100vh;
+    overflow: hidden;
+    background: #fff;
+}
+h2
+{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    text-align: center;
+    width: 100%;
+    font-size: 12vw;
+    line-height: 1em;
+    font-weight: 800;
+    color: #333;
+    text-transform: uppercase;
+}
+i
+{
+    position: absolute;
+    display: block;
+    background: #000;
+    border-radius: 50%;
+    animation: animate 5s linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {transform: translateY(calc(100vh + 350px));
+    }
+    100%
+    {transform: translateY(-300px);}
+}
+i:nth-child(5n+1)
+{
+    background: #fff;
+}
+i:nth-child(5n+2)
+{
+    background: hsl(0, 87%, 66%);
+}
+i:nth-child(5n+3)
+{
+    background: #fff;
+    border: 5px solid rgb(215, 47, 28);
+}
+i:nth-child(5n+4)
+{
+    background: hsl(313, 94%, 63%);
+}
+i:nth-child(5n+5)
+{
+    background: #fff;
+    border: 5px solid hwb(309 0% 0%);
+}
+o:nth-child(5n+1)
+{
+    background: #fff;
+}
+o:nth-child(5n+2)
+{
+    background: hwb(244 24% 0%);
+}
+o:nth-child(5n+3)
+{
+    background: #fff;
+    border: 5px solid #4133ff;
+}
+o:nth-child(5n+4)
+{
+    background: #3fb8dc;
+}
+o:nth-child(5n+5)
+{
+    background: #fff;
+    border: 5px solid #9de1e0;
+}
+p:nth-child(5n+1)
+{
+    background: #fff;
+}
+p:nth-child(5n+2)
+{
+    background: #23cd3f;
+}
+p:nth-child(5n+3)
+{
+    background: #fff;
+    border: 5px solid #5ac794;
+}
+p:nth-child(5n+4)
+{
+    background: #2bd11b;
+}
+p:nth-child(5n+5)
+{
+    background: #fff;
+    border: 5px solid #2bd11b;
+}

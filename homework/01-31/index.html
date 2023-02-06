@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS与JS动画特效</title>
+    <link rel="stylesheet" href="newstyle.css">
+</head>
+<body>
+    <h2>Good<br>Evening<br>Guys</h2>
+    <div>
+      
+        <button style="margin: 0 auto;" onclick="cicrle1()">Give me red</button>
+        <button style="margin: 0 auto;" onclick="cicrle2()">Give me blue</button>
+        <button style="margin: 0 auto;" onclick="cicrle3()">Give me green</button>
+        
+      </div>
+    <script>
+        function cicrle1(){
+            let amount = 100;
+            let body = document.querySelector('body');
+            let i = 0;
+            while(i < amount){
+                let element = document.createElement('i');
+                let posX = Math.floor(Math.random() * window.innerWidth)
+                let delay = Math.random() * -20;
+                let duration = Math.random() * -10;
+
+                let size = Math.random() * 250;
+                element.style.width = 10 + size + 'px';
+                element.style.height = 10 + size + 'px';
+                element.style.left = posX + 'px';
+                element.style.animationDelay = delay + 's';
+                element.style.animationDuration = 5 + duration + 's';
+                element.style.webkitBoxShadow = "0 30px 50px #0002"
+
+                body.appendChild(element);
+                i++
+            }
+        }
+        function cicrle2(){
+            let amount = 100;
+            let body = document.querySelector('body');
+            let o = 0;
+            while(o < amount){
+                let element = document.createElement('o');
+                let posX = Math.floor(Math.random() * window.innerWidth)
+                let delay = Math.random() * -20;
+                let duration = Math.random() * -10;
+
+                let size = Math.random() * 250;
+                element.style.width = 10 + size + 'px';
+                element.style.height = 10 + size + 'px';
+                element.style.left = posX + 'px';
+                element.style.animationDelay = delay + 's';
+                element.style.animationDuration = 5 + duration + 's';
+                element.style.webkitBoxShadow = "0 30px 50px #0002"
+
+                body.appendChild(element);
+                o++
+            }
+        }
+        function cicrle3(){
+            let amount = 100;
+            let body = document.querySelector('body');
+            let p = 0;
+            while(p < amount){
+                let element = document.createElement('p');
+                let posX = Math.floor(Math.random() * window.innerWidth)
+                let delay = Math.random() * -20;
+                let duration = Math.random() * -10;
+
+                let size = Math.random() * 250;
+                element.style.width = 10 + size + 'px';
+                element.style.height = 10 + size + 'px';
+                element.style.left = posX + 'px';
+                element.style.animationDelay = delay + 's';
+                element.style.animationDuration = 5 + duration + 's';
+                element.style.webkitBoxShadow = "0 30px 50px #0002"
+
+                body.appendChild(element);
+                p++
+            }
+        }
+    </script>
+</body>
+</html>

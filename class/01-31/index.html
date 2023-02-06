@@ -1,0 +1,134 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <script src="/class/01-31/1123.js"></script>
+      <script src="https://d3js.org/d3.v7.min.js"></script>
+      <link rel="stylesheet" href="style31.css">
+      
+  </head>
+  <body>
+    <!-- <div>
+        <h1 id="HL">
+        JS Libraries,  <br>
+        D3.js and Data Manipulation</h1>
+    </div>
+    <p>This is</p>
+    <p>a person</p>
+    <p>who is</p>
+    <p>hungry</p>
+    <script>
+        var sm = sumAB(2,5);
+        console.log(sm);
+    </script> -->
+
+    <!-- <div>
+    <svg width="760" height="200" id="static-circles">
+        <rect width="760" height="200" style="fill:white;stroke-width:1;stroke:black"/>
+
+        <circle/>
+        <circle cx="120"/>
+        <circle cx="240"/>
+        <circle cx="360"/>
+        <circle cx="480"/>
+        </svg>
+
+    </div> -->
+
+    <script>
+        // var page_title = d3.select('#HL');
+        // page_title.style("color","blue");
+        // page_title.style("font-size","60px");
+    
+        // page_title.style("color","green")
+        // .style("background-color","pink")
+        // .style("font-size","50px");
+    
+        // page_title.attr("class","comicText");
+    
+        // // d3.selectAll("p").style("text-align","center")
+        // // .attr("class","comicText");
+        
+        // var allCicles = d3.selectAll("circle")
+        //     .style("fill","green")
+        //     .attr("cy","50")
+        //     .attr("r","20");
+        
+    </script>
+
+<div>
+    <svg width="760" height="200" id="static-circles">
+        <rect width="760" height="200" style="fill:white;stroke-width:1;stroke:black"/>
+
+        <!-- <circle/>
+        <circle cx="120"/>
+        <circle cx="240"/>
+        <circle cx="360"/>
+        <circle cx="480"/>
+        </svg> -->
+
+    </div>
+
+<div>
+<button onclick="drawCircle(data1)">Data 1</button>
+</div>
+    <script>
+        var data1 = [
+            {
+                country:"usa",
+                value:12412341
+            },
+            {
+                country:"mex",
+                value:24318650
+            }
+        ];
+        var data2 = [
+            {
+                country:"chn",
+                value:65430234 
+            },
+            {
+                country:"mex",
+                value:24609650
+            }
+        ]
+        var data3 = [
+            {
+                country:"chn",
+                value:65430234 
+            },
+            {
+                country:"mex",
+                value:24609650
+            },
+            {
+                country:"usa",
+                value:22464340
+            }
+        ]
+
+        function drawCircles(dataArray){
+
+            var circles = d3.select("#daya-vis").selectAll("circle")
+            .data(dataArray, function(d){
+                if(d.country == "usa"){
+                    
+                }
+                return d.country;
+            });
+            circles.enter().append("circle")
+            .attr("cy","100")
+            .attr("cx",randomPosition)
+            .attr("r","0")
+            .transition().duration(1000)
+            .attr("r","25")
+
+            circles.transition().duration(1000)
+            .attr("cx",randomPosition);
+
+            circles.ex
+        }
+    </script>
+  </body>  
+</html>
