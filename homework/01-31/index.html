@@ -10,12 +10,52 @@
     <h2>Good<br>Evening<br>Guys</h2>
     <div>
       
-        <button style="margin: 0 auto;" onclick="cicrle1()">Give me red</button>
-        <button style="margin: 0 auto;" onclick="cicrle2()">Give me blue</button>
-        <button style="margin: 0 auto;" onclick="cicrle3()">Give me green</button>
+        <button style="margin: 0 auto;" onclick="drawCircle(data1)">Give me dataset1</button>
+        <button style="margin: 0 auto;" onclick="drawCircle(data2)">Give me dataset2</button>
+        <button style="margin: 0 auto;" onclick="drawCircle(data3)">Give me dataset3</button>
         
       </div>
     <script>
+         var data1 = [
+        {
+          country:"usa",
+          value: 12412341
+        },
+        {
+          country:"mex",
+          value: 24318650
+        }
+      ];
+      
+      var data2 = [
+        {
+          country:"chn",
+          value: 65430234
+        },
+        {
+          country:"mex",
+          value:24609650
+        }
+      ]
+      
+      var data3 = [
+        {
+          country:"chn",
+          value: 65430234
+        },
+      ]
+
+      function drawCircles(dataArray) {
+              if (d.country == "usa") {
+                return cicrle1();
+              } else if (d.country == "mex") {
+                return cicrle2();
+              } else if (d.country == "chn") {
+                return cicrle3();
+              }
+            }
+
+
         function cicrle1(){
             let amount = 100;
             let body = document.querySelector('body');
