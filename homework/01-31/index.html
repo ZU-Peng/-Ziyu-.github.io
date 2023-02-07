@@ -5,16 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CSS与JS动画特效</title>
     <link rel="stylesheet" href="newstyle.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
-    <h2>Good<br>Evening<br>Guys</h2>
+    <h2>Buttons<br>are on<br>left corner</h2>
     <div>
       
-        <button style="margin: 0 auto;" onclick="drawCircle(data1)">Give me dataset1</button>
-        <button style="margin: 0 auto;" onclick="drawCircle(data2)">Give me dataset2</button>
-        <button style="margin: 0 auto;" onclick="drawCircle(data3)">Give me dataset3</button>
+        <button style="margin: 0 auto;" onclick="cicrle1()">Give me dataset1</button>
+        <button style="margin: 0 auto;" onclick="cicrle2()">Give me dataset2</button>
+        <button style="margin: 0 auto;" onclick="cicrle3()">Give me dataset3</button>
         
       </div>
+
+      <svg id="data-viz"></svg>
     <script>
          var data1 = [
         {
@@ -45,7 +48,18 @@
         },
       ]
 
+
       function drawCircles(dataArray) {
+
+        var circles = d3.select("#data-viz").selectAll("circle")
+                .data(dataArray, function(d){
+                   return d.country;
+                });
+
+                dataArray.forEach(function(d){
+    d.country = parseFloat(d.country)
+});
+
               if (d.country == "usa") {
                 return cicrle1();
               } else if (d.country == "mex") {
@@ -66,12 +80,12 @@
                 let delay = Math.random() * -20;
                 let duration = Math.random() * -10;
 
-                let size = Math.random() * 250;
+                let size = Math.random() * 200;
                 element.style.width = 10 + size + 'px';
                 element.style.height = 10 + size + 'px';
                 element.style.left = posX + 'px';
                 element.style.animationDelay = delay + 's';
-                element.style.animationDuration = 5 + duration + 's';
+                element.style.animationDuration = 8 + duration + 's';
                 element.style.webkitBoxShadow = "0 30px 50px #0002"
 
                 body.appendChild(element);
@@ -88,12 +102,12 @@
                 let delay = Math.random() * -20;
                 let duration = Math.random() * -10;
 
-                let size = Math.random() * 250;
+                let size = Math.random() * 150;
                 element.style.width = 10 + size + 'px';
                 element.style.height = 10 + size + 'px';
                 element.style.left = posX + 'px';
                 element.style.animationDelay = delay + 's';
-                element.style.animationDuration = 5 + duration + 's';
+                element.style.animationDuration = 8 + duration + 's';
                 element.style.webkitBoxShadow = "0 30px 50px #0002"
 
                 body.appendChild(element);
@@ -110,12 +124,12 @@
                 let delay = Math.random() * -20;
                 let duration = Math.random() * -10;
 
-                let size = Math.random() * 250;
+                let size = Math.random() * 100;
                 element.style.width = 10 + size + 'px';
                 element.style.height = 10 + size + 'px';
                 element.style.left = posX + 'px';
                 element.style.animationDelay = delay + 's';
-                element.style.animationDuration = 5 + duration + 's';
+                element.style.animationDuration = 8 + duration + 's';
                 element.style.webkitBoxShadow = "0 30px 50px #0002"
 
                 body.appendChild(element);
