@@ -33,6 +33,22 @@ i
     border-radius: 50%;
     animation: animate 5s linear infinite;
 }
+o
+{
+    position: absolute;
+    display: block;
+    background: #000;
+    border-radius: 50%;
+    animation: animate 5s linear infinite;
+}
+p
+{
+    position: absolute;
+    display: block;
+    background: #000;
+    border-radius: 50%;
+    animation: animate 5s linear infinite;
+}
 @keyframes animate
 {
     0%
@@ -41,6 +57,7 @@ i
     100%
     {transform: translateY(-300px);}
 }
+
 i:nth-child(5n+1)
 {
     background: #fff;
