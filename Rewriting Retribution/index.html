@@ -8,7 +8,7 @@
         padding: 0;
       }
       
-      #bg-video1, #bg-video2 {
+      #bg-video1{
         position: fixed;
         top: 0;
         left: 0;
@@ -16,6 +16,15 @@
         min-height: 100%;
         z-index: -1;
       }
+      #bg-video2{
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+  opacity: 0; /* set initial opacity to 0 */
+}
       
       #content1, #content2 {
         height: 1500px; /* adjust this value as per your content length */
@@ -38,9 +47,10 @@
     </style>
   </head>
   <body>
-    <video src="./videos/头图draft video.mp4" width="1550" preload="auto" autoplay loop>      </video>
+    <video src="./videos/头图draft video.webm" width="1550" preload="auto" autoplay>      </video>
 
-    <video id="bg-video1" src="./videos/Jane conner singsing.mp4" preload="auto" autoplay>
+    <video id="bg-video1" src="./videos/Jane conner singsing.webm" preload="auto" autoplay>
+        <!-- <video id="bg-video1" src="./videos/Jane conner singsing.mp4" preload="auto" autoplay></video> -->
       <!-- <source src="./videos/Jane conner singsing.mp4" type="video/mp4"> -->
     </video>
     <div id="content1">
@@ -60,7 +70,8 @@
         <p> However, despite these challenges, restorative justice continues to gain momentum as a viable and effective alternative to traditional criminal justice systems. By focusing on repairing harm, promoting empathy, and building stronger communities, restorative justice has the potential to transform the way we think about justice and create a more positive and just world for everyone.</p>
     </div>
     <video id="bg-video2" preload="auto" autoplay>
-      <source src="./videos/Clarissa.mp4" type="video/mp4">
+      <source src="./videos/Clarissa.webm" type="video/mp4">
+      <!-- <source src="./videos/Clarissa.mp4" type="video/mp4"> -->
     </video>
     <div id="content2">
       <h1>Part 2 Heading Here</h1>
@@ -86,26 +97,49 @@
       const content2 = document.getElementById("content2");
       const contentHeight = content1.offsetHeight + content2.offsetHeight;
 
-      window.addEventListener("scroll", function () {
-        const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
 
-        // calculate the percentage of how much the user has scrolled
-        const scrollPercentage = (scrollPos / contentHeight) * 100;
+      window.addEventListener("scroll", function() {
+  var content1Bounds = content1.getBoundingClientRect();
+  var content2Bounds = content2.getBoundingClientRect();
+  
+  // Check if the first text section is visible on the screen
+  if (content1Bounds.top <= window.innerHeight && content1Bounds.bottom >= 0) {
+    video1.play()
+    video2.style.opacity = "0"
+    video2.pause();
+  } else {
+    video1.pause();
+  }
+  
+  // Check if the second text section is visible on the screen
+  if (content2Bounds.top <= window.innerHeight && content2Bounds.bottom >= 0) {
+    video2.style.opacity = "1";
+    video2.play();
+  } else {
+    video2.pause();
+  }
+  
+    //   window.addEventListener("scroll", function () {
+    //     const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
 
-        // set the video playback rate based on the scroll percentage
-        video1.playbackRate = video2.playbackRate = scrollPercentage / 100;
+    //     // calculate the percentage of how much the user has scrolled
+    //     const scrollPercentage = (scrollPos / contentHeight) * 100;
 
-        // play or pause the video based on the scroll position
-        if (scrollPos < content1.offsetHeight) {
-        //   video1.currentTime = scrollPos / video1.playbackRate;
-          video1.play();
-          video2.pause();
-        } else {
-          video1.pause();
-        //   video2.currentTime = (scrollPos - content1.offsetHeight) / video2.playbackRate;
-          video2.play();
-        }
-      });
+    //     // set the video playback rate based on the scroll percentage
+    //     video1.playbackRate = video2.playbackRate = scrollPercentage / 100;
+
+    //     // play or pause the video based on the scroll position
+    //     if (scrollPos < content1.offsetHeight) {
+    //     //   video1.currentTime = scrollPos / video1.playbackRate;
+    //       video1.play();
+    //       video2.pause();
+    //     } else {
+    //       video1.pause();
+    //     //   video2.currentTime = (scrollPos - content1.offsetHeight) / video2.playbackRate;
+    //       video2.play();
+    //     }
+    //   })
+});
     </script>
   </body>
 </html>
