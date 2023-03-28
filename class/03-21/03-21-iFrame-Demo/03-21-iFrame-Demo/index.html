@@ -1,0 +1,47 @@
+<!-- ARTG5330 Visualization Technologies 1
+    March 21, 2023
+    Spring Semester
+    Week 9
+
+    DEMONSTRATION OF iFRAMES
+    Re: Based on the interactive charts in 03-21-TwoCounters and 03-21-Brush
+
+    For more information on HTML iFrames, see:
+            https://www.w3schools.com/html/html_iframe.asp -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML iFrame</title>
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <div id="banner">
+    </div>
+
+    <div style="padding: 20px;">
+        <h1>DEMONSTRATION OF HTML iFRAMES</h1>
+        <h3 style="margin-top: 0">
+            The HTML <em><b>iFrame</b></em> tag embeds other HTML pages within the current one.
+        </h3>
+    </div>
+
+    <div class="section">
+        <p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut enim sit amet turpis elementum tristique at in mauris. Etiam egestas nulla vel leo dictum eleifend. Aenean ac gravida leo. Phasellus sed justo rutrum, iaculis orci vel, fringilla nisi. Pellentesque vestibulum aliquam odio, sed suscipit metus aliquet rutrum. Nam pharetra et nibh a semper. Phasellus a eleifend magna. Nulla vel sapien vulputate, finibus justo ac, convallis odio. Nulla et augue arcu. Duis porta augue laoreet lacus dictum, eu hendrerit sem tempor. Integer condimentum, enim sit amet sollicitudin pretium, ligula leo convallis nibh, eget aliquam ex orci vitae quam. Morbi maximus. Etiam sed viverra urna, ac tincidunt urna. Cras nibh sem, vehicula sit amet massa pretium, iaculis porttitor quam. Duis vitae erat nec est laoreet aliquam. Aenean et nunc lacinia, malesuada erat a, euismod ipsum. Pellentesque eu enim id velit bibendum aliquet nec vel purus. Nulla iaculis justo lectus, et vehicula nulla condimentum id. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi justo leo, bibendum non dui ac, sollicitudin tempus justo. Curabitur ut elementum felis, sit amet fermentum quam. Vivamus dignissim sed magna pharetra tincidunt. Morbi ultrices accumsan est, id gravida mauris congue vel. Fusce quis rhoncus urna, ac iaculis nulla. Fusce id arcu ut nibh faucibus mollis. Cras ultrices faucibus nibh, non tincidunt ligula sodales quis. Integer aliquam interdum tellus vitae ornare. Nullam ultrices purus dui, quis fringilla orci sollicitudin non. Duis semper lectus condimentum efficitur volutpat. </p>
+        <iframe src="/homework/03-21-Brush/index.html" title="D3-Brush" width="800" height="550" 
+            class="iframe"></iframe>   
+    </div>
+
+    <div class="section">
+        <iframe src="/homework/03-21-TwoCounters/index.html" title="TwoCounters" width="800" height="250" 
+            class="iframe" scrolling="no"></iframe> 
+        <p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices lorem ac metus vulputate, non finibus justo finibus. Phasellus vitae lectus viverra urna porttitor lobortis non quis enim. Nullam vel ultricies sapien, eget scelerisque lorem. Etiam et dolor neque. Aenean quis tempor magna, nec ullamcorper elit. In tellus ipsum, sollicitudin eget pellentesque eu, pulvinar eu lacus. Nulla facilisi. Donec eget lacus id odio sagittis rutrum vehicula sit amet nunc. Lorem ipsum dolor sit amet, consectetur.</p>
+    </div>
+
+    <!-- This is an empty script -->
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

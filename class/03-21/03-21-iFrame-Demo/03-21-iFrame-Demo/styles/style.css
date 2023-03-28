@@ -1,0 +1,44 @@
+h1 {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 22pt;
+  text-align: center;
+}
+
+h3 {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-align: center;
+}
+
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14pt;
+  font-weight: normal;
+  margin: 2px;
+}
+
+#banner {
+  background-image: url("https://camd.northeastern.edu/wp-content/uploads/2022/09/DSC07079.jpg ");
+  /* background-image: url(https://camd.northeastern.edu/wp-content/uploads/2020/07/dataviz_Arushi_Sing_NEUstudent_credit_cropped.jpg); */
+  background-position: center; 
+  background-size: cover;
+  padding: 20vh 20px;
+  text-align: center;
+}
+
+/* One useful way of positioning elements in a webpage next to each other
+and resizing with the screen is to use the CSS flexbox properties.
+See the following guide:
+      https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+.section {
+  display: flex;
+  padding: 20px;
+}
+
+.section p {
+  flex: 1;
+  padding: 20px;
+}
+
+iframe {
+  border: 1;
+}

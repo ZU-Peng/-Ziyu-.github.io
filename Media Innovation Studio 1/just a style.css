@@ -1,0 +1,127 @@
+p.redtype{
+    color:brown
+}
+/* --------------  LOAD FONTS FROM SERVER ------------------------------ */
+/* ---- The font-family defines the name that will be used in CSS ------ */ /* --------along with a source with location and  font file name ---- */
+@font-face {
+    font-family: "IvarHeadline-Regular";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarHeadline-Regular.woff2);
+   }  
+   @font-face {
+    font-family: "IvarHeadline-Italic";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarHeadline-Italic.woff2);
+   } 
+   @font-face {
+    font-family: "IvarHeadline-Bold";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarHeadline-Bold.woff2);
+   }  
+   @font-face {
+    font-family: "IvarHeadline-BoldItalic";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarHeadline-Italic.woff2);
+   } 
+   @font-face {
+    font-family: "IvarText-Regular";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarText-Regular.woff2);
+   } 
+   @font-face {
+    font-family: "IvarText-Italic";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarText-Regular.woff2);
+   }
+   @font-face {
+    font-family: "IvarText-Bold";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarText-Bold.woff2);
+   }
+   @font-face {
+    font-family: "Staff-Regular";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/Staff-Regular.woff2);
+   }  
+   @font-face {
+    font-family: "Staff-Italic";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/Staff-Italic.woff2);
+   } 
+   @font-face {
+    font-family: "Staff-Bold";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/Staff-Bold.woff2);
+   }  
+   @font-face {
+    font-family: "Staff-BoldItalic";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/Staff-BoldItalic.woff2);
+   } 
+   @font-face {
+    font-family: "Carrie-Regular";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/VTCCarrie-Regular.woff2);
+   } 
+   .headline {
+color:#CD395B;
+font-family:"IvarHeadline-Regular","Georgia",serif ;
+font-size: 5em;
+text-align: center;
+   }
+h2.headline {
+    color:#BADEFC;
+    font-family:"IvarHeadline-Regular","Georgia",serif ;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 18px;
+   }
+.container p{
+    color:#1e3f5a;
+    font-family:"IvarHeadline-Regular","Georgia",serif ;
+    font-size: 3em;
+    text-align: center;
+    line-height: 1.8;
+    font-size: 18px;
+    margin-top: 18px;
+}
+.container a:link{
+    font-family: "Staff-Bold","Arial",sans-serif;
+    color:#CD395B;
+}
+.container a:hover{
+    font-family: "Staff-Bold","Arial",sans-serif;
+    color:#20a42f;
+}
+.container a:visited{
+    font-family: "Staff-Bold","Arial",sans-serif;
+    color:#b1d715;
+}
+.container{
+  width: 50%;
+  margin:auto auto auto auto;
+}
+block.quote{
+  font-size: xx-large;
+  font-family: "Staff-Bold","Arial",sans-serif;
+  width:30px;
+  background-color: #CD395B;
+  padding: 20px;
+  float:right;
+  margin-right: 25px;
+  /* position: relative;
+  position:absolute;
+  position:sticky;
+  position:fixed; */
+}
+figure.round{
+  margin-left: auto;
+}
+figure.round img{
+  width: 100%;
+  border-radius: 50px 50px 50px 50px;
+}
+.photogrid{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 50px;
+}
+   /* ------------------ EMANCIPATOR COLORS ---------------------------------------- */
+   /* FOREST #31463F */
+   /* ROSE #CD395B */
+   /* FOREST #31463F */
+   /* PINK #F6B0A0 */
+   /* PUTTY #F6F2E1 */
+   /* SKY #BADEFC */
+   /* BLACK #1C1C1C */
+   /* HIGHLIGHTER #EBF952 
+   gold#FBC24C
+   */
