@@ -1,0 +1,342 @@
+ <!-- <div>
+    <video src="./videos/头图draft video.webm" width="1500" preload="auto" autoplay loop>      </video>
+</div> -->
+
+    <!-- <video id="bg-video1" src="./videos/Jane conner singsing.webm" preload="auto" autoplay loop> -->
+        <!-- <video id="bg-video1" src="./videos/Jane conner singsing.mp4" preload="auto" autoplay></video> -->
+      <!-- <source src="./videos/Jane conner singsing.mp4" type="video/mp4"> -->
+    </video>
+    <div id="#content">
+        <h1>Restorative justice and its power to heal</h1>
+        <p>The current criminal justice system places punishment as the goal for accountability to crime.</p>
+          <p>But this approach does not give any agency to victims.        </p>
+          <p>“In our current system, you will have hours and hours, and years perhaps, of proceedings,” said Jessica Hedges, a Boston-based defense attorney at Hedges & Tumposky LLP and a survivor of crime and a defense attorney. “And the victim is only heard in that system for 10 minutes at the final sentencing, and maybe the prosecutor is consulting with the victim and maybe not.”</p>
+          <p>This lack of victim-centered justice led to the birth of the RISE program and the Restorative Justice Program, or RJ. Both programs aim to create conversations with victims that allow defendants to understand the impacts of crime and work to make amends for those harms. This program started in 2015 and is part of the Massachusetts federal district court system.</p>
+          <p>Achieving true justice starts with knowing who is harmed. And then working to repair that harm. </p>
+          <p>Many offenders who take part in these restorative justice programs are considered having committed “victimless” crimes. This means there are no direct people targeted in the crime, like in drug distribution.</p>
+          
+
+    </div>
+    <div id="content1">
+      <h1>Restorative justice and its power to heal</h1>
+      <p>The current criminal justice system places punishment as the goal for accountability to crime.</p>
+        <p>But this approach does not give any agency to victims.        </p>
+        <p>“In our current system, you will have hours and hours, and years perhaps, of proceedings,” said Jessica Hedges, a Boston-based defense attorney at Hedges & Tumposky LLP and a survivor of crime and a defense attorney. “And the victim is only heard in that system for 10 minutes at the final sentencing, and maybe the prosecutor is consulting with the victim and maybe not.”</p>
+        <p>This lack of victim-centered justice led to the birth of the RISE program and the Restorative Justice Program, or RJ. Both programs aim to create conversations with victims that allow defendants to understand the impacts of crime and work to make amends for those harms. This program started in 2015 and is part of the Massachusetts federal district court system.</p>
+        <p>Achieving true justice starts with knowing who is harmed. And then working to repair that harm. </p>
+        <p>Many offenders who take part in these restorative justice programs are considered having committed “victimless” crimes. This means there are no direct people targeted in the crime, like in drug distribution.</p>
+        <p>Janet Connors, however, emphasizes that crimes, whether there is a specific victim or not, affect a whole community.</p>
+        <p>“If you follow those drugs, if you follow those guns, how many people get hurt? How many people get killed, How many people get arrested, deported, incarcerated? How many people get addicted? How many people die of overdoses? How many families suffer behind all of that? And so people then realize, ‘Wow, I have a lot of victims. I never thought about it.’”</p>
+        <p>Connors lost her son, Joel, on Jan. 31, 2001. Joel was stabbed to death in his own apartment in Dorchester at the hands of four men — three of whom were sent to prison, while the other was not charged due to reasonable doubt.</p>
+        <p>Since then, she has devoted her life to restorative justice practices and healing circles. Connors now holds many circles throughout the Greater Boston area at courts, prisons, schools and other community centers, gathering those who’ve committed crimes with survivors.</p>
+    </div>
+    <video id="bg-video2" preload="auto" autoplay>
+      <source src="./videos/Clarissa.webm" type="video/mp4">
+      <!-- <source src="./videos/Clarissa.mp4" type="video/mp4"> -->
+    </video>
+    <div id="content2">
+      <h1>Clarissa Turner</h1>
+      <p>Clarissa Turner emphasizes that talking circles provide structure, by creating a guided format for conversations between victims, offenders and other members of the community, which allows each person both to listen and to be heard.</p>
+
+        <p>“In circle, we learn how to say what we need to say, release a lot of pain, not one feeling embarrassed to express how they feel or what they've been through. It’s a safe haven place that you can just release. And we know when we do release, we leave space open to receive anew.” </p>
+        <p>Turner lost her eldest son, Marquis, to homicide in 2011. He is survived by two sons and a daughter whom he never got to meet.
+        </p>
+        <p>She was introduced to restorative justice by Connors, whom Turner calls a “beautiful mentor, beautiful angel in the midst of my worst time.” They often work alongside each other holding circles, and Turner also started a nonprofit organization called Legacy Lives On, which is a support system for families affected by homicide.
+        </p>
+        <p>For Turner, one of the most powerful things she sees in circles is individuals taking responsibility and feeling remorse for their actions. This, she said, is the beginning of their healing journey.
+        </p>
+        <p>“For an individual in a circle to say to me, ‘I didn't kill your son, but I harmed somebody else. But I'm sorry for what that person did to you’ — do you know what I did to me the first time that happened? I was like, ‘Oh my God, that's all I want. For these kids to acknowledge. Don't just tell me sorry because you think I want to hear it, but I want you to mean it. Because when you mean you're sorry, then that's been your process of healing begins. Because that’s telling me you are holding yourself accountable, your own what you did. Now you want to mend. Now you want to be better, show up better, not just for me or the community, but for your own family who you harmed.”
+        </p>
+        
+    </div>
+
+    <body>
+      <div class='scrolly'>
+      
+        <!-- sticky graphic -->
+        <div>
+          <video src="./videos/头图draft video.webm" width="1500" preload="auto" autoplay loop>      </video>
+      </div>
+        <figure class='sticky'>
+        
+          <video id="bg-video1" src="./videos/Jane conner singsing.webm" preload="auto" autoplay loop>
+          <!-- chart stuff in here -->
+        </figure>
+      
+        <!-- step text -->
+        <article>
+          <div class='step' data-index='0'>
+            <h1>Restorative justice and its power to heal</h1>
+              <p>The current criminal justice system places punishment as the goal for accountability to crime.</p>
+                <p>But this approach does not give any agency to victims.        </p>
+                <p>“In our current system, you will have hours and hours, and years perhaps, of proceedings,” said Jessica Hedges, a Boston-based defense attorney at Hedges & Tumposky LLP and a survivor of crime and a defense attorney. “And the victim is only heard in that system for 10 minutes at the final sentencing, and maybe the prosecutor is consulting with the victim and maybe not.”</p>
+                <p>This lack of victim-centered justice led to the birth of the RISE program and the Restorative Justice Program, or RJ. Both programs aim to create conversations with victims that allow defendants to understand the impacts of crime and work to make amends for those harms. This program started in 2015 and is part of the Massachusetts federal district court system.</p>
+                <p>Achieving true justice starts with knowing who is harmed. And then working to repair that harm. </p>
+                <p>Many offenders who take part in these restorative justice programs are considered having committed “victimless” crimes. This means there are no direct people targeted in the crime, like in drug distribution.</p>
+          </div>
+          <!-- ...more steps -->
+        </article>
+      </div>
+      
+      <script src="./RR sticky.js"></script>
+        </body>
+
+
+
+
+        <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Rewriting Retribution</title>
+	<meta name="description" content="Scrollama: Sticky Overlay Example">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" href="./styles/RRstyle.css"> -->
+	<style>
+		#scrolly {
+			position: relative;
+			/* background-color: #34e511; */
+			padding: 0rem;
+		}
+
+		article {
+			position: relative;
+			padding: 0;
+			max-width: 50rem;
+			margin: 0 auto;
+			top: -300px;
+		}
+
+		figure {
+			position: -webkit-sticky;
+			position: sticky;
+			left: 0;
+			width: 100%;
+			margin-top: 0;
+			/* -webkit-transform: translate3d(0, 0, 0);
+			-moz-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0); */
+			z-index: -1;
+		}
+
+		figure video {
+			padding: 1rem;
+			position: relative;
+			top: 0px;
+			left: 0px;
+			/* -moz-transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%); */
+		}
+
+		.step {
+			margin: 0 auto 2rem auto;
+			color: #fff;
+			background-color: rgba(0, 0, 0, 0.1);
+		}
+
+		.step:last-child {
+			margin-bottom: 0;
+		}
+
+		.step.is-active p {
+			background-color: goldenrod;
+			color: #3b3b3b;
+		}
+
+		.step p {
+			text-align: center;
+			padding: 1rem;
+			font-size: 1rem;
+			background-color: #3b3b3b;
+		}
+
+		.normal p{
+			color: #fff;
+			font-family: "Staff-Bold","Arial",sans-serif;
+			font-size: 1.5em;
+			width: 50%;
+  			margin:auto auto auto auto;
+			padding: 15px;
+			line-height: 1.5;
+		}
+		.normal h1{
+			color: #fff;
+			font-family:"IvarHeadline-Regular","Georgia",serif ;
+			font-size: 5em;
+			width: 50%;
+  			margin:auto auto auto auto;
+			padding: 20px;
+		}
+
+		block.quote{
+			color: #FBC24C;
+			font-family:"IvarHeadline-Regular","Georgia",serif ;
+			font-size: auto;
+		}
+	</style>
+</head>
+<body style="background-color:rgb(0, 0, 0);">
+
+	<main>
+
+      <div>
+        <video src="./videos/头图draft video.webm" width="1500" preload="auto" autoplay loop> </video>
+      </div>
+	  <div class="normal" >
+		<h1>Restorative justice and its power to<block class="quote"> heal</block></h1>
+		  <p>The current criminal justice system places punishment as the goal for accountability to crime.</p>
+		<p>But this approach does not give any agency to victims.        </p>
+		<p>“In our current system, you will have hours and hours, and years perhaps, of proceedings,” said Jessica Hedges, a Boston-based defense attorney at Hedges & Tumposky LLP and a survivor of crime and a defense attorney. “And the victim is only heard in that system for 10 minutes at the final sentencing, and maybe the prosecutor is consulting with the victim and maybe not.”</p>
+		<p>This lack of victim-centered justice led to the birth of the RISE program and the Restorative Justice Program, or RJ. Both programs aim to create conversations with victims that allow defendants to understand the impacts of crime and work to make amends for those harms. This program started in 2015 and is part of the Massachusetts federal district court system.</p>
+		<p>Achieving true justice starts with knowing who is harmed. And then working to repair that harm. </p>
+		<p>Many offenders who take part in these restorative justice programs are considered having committed “victimless” crimes. This means there are no direct people targeted in the crime, like in drug distribution.</p>
+	</div>
+		<section id="scrolly">
+				<!-- 将这个部分ID命名为scrolly -->
+
+			<figure style="height: 1px; top: 1px; left: 1px;">
+         		<video class="bg-video" id="bg-video1" src="./videos/Jane conner singsing.webm" preload="auto" autoplay></video>
+			</figure>
+		
+       	 	<figure style="height: 0px; top: 0px;">
+				<video class="bg-video" id="bg-video2" src="./videos/Clarissa.webm" preload="auto" autoplay></video>
+			</figure>
+
+			<!-- 放入文章素材 -->
+			<article>
+				<div class="step" data-step="1" style="height: 699px;" data-scrollama-index="1">
+					<p>Janet Conner
+						She was a victim.
+						She lost her son to a home invasion January 31st of 2001.
+						</p>
+				</div>
+
+				<div class="step" data-step="2" style="height: 459px;" data-scrollama-index="1">
+					<p>Janet Connors, however, emphasizes that crimes, whether there is a specific victim or not, affect a whole community.</p>
+        			<p>“If you follow those drugs, if you follow those guns, how many people get hurt? How many people get killed, How many people get arrested, deported, incarcerated? How many people get addicted? How many people die of overdoses? How many families suffer behind all of that? And so people then realize, ‘Wow, I have a lot of victims. I never thought about it.’”</p>
+        			<p>Connors lost her son, Joel, on Jan. 31, 2001. Joel was stabbed to death in his own apartment in Dorchester at the hands of four men — three of whom were sent to prison, while the other was not charged due to reasonable doubt.</p>
+        			<p>Since then, she has devoted her life to restorative justice practices and healing circles. Connors now holds many circles throughout the Greater Boston area at courts, prisons, schools and other community centers, gathering those who’ve committed crimes with survivors.</p>
+    			</div>
+
+				<div class="step" data-step="3" style="height: 799px;" data-scrollama-index="2">
+					<h1>Clarissa Turner</h1>
+        			<p>Clarissa Turner emphasizes that talking circles provide structure, by creating a guided format for conversations between victims, offenders and other members of the community, which allows each person both to listen and to be heard.</p>
+        			<p>“In circle, we learn how to say what we need to say, release a lot of pain, not one feeling embarrassed to express how they feel or what they've been through. It’s a safe haven place that you can just release. And we know when we do release, we leave space open to receive anew.” </p>
+        			<p>Turner lost her eldest son, Marquis, to homicide in 2011. He is survived by two sons and a daughter whom he never got to meet.</p>
+        			<p>She was introduced to restorative justice by Connors, whom Turner calls a “beautiful mentor, beautiful angel in the midst of my worst time.” They often work alongside each other holding circles, and Turner also started a nonprofit organization called Legacy Lives On, which is a support system for families affected by homicide.</p>
+        			<p>For Turner, one of the most powerful things she sees in circles is individuals taking responsibility and feeling remorse for their actions. This, she said, is the beginning of their healing journey.</p>
+        			<p>“For an individual in a circle to say to me, ‘I didn't kill your son, but I harmed somebody else. But I'm sorry for what that person did to you’ — do you know what I did to me the first time that happened? I was like, ‘Oh my God, that's all I want. For these kids to acknowledge. Don't just tell me sorry because you think I want to hear it, but I want you to mean it. Because when you mean you're sorry, then that's been your process of healing begins. Because that’s telling me you are holding yourself accountable, your own what you did. Now you want to mend. Now you want to be better, show up better, not just for me or the community, but for your own family who you harmed.”        </p>
+				</div>
+				<!-- <div class="step" data-step="4" style="height: 559px;" data-scrollama-index="3">
+					<p>STEP 4</p>
+				</div> -->
+			</article>
+		</section>
+
+		<section id="outro"></section>
+	</main>
+
+	<script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
+	<script src="./Java script/scrollama.min.js"></script>
+	<script>
+		// using d3 for convenience
+		// 定义所有main当众使用D3的元素为main,定义所有main当中id叫scrolly的元素为scrolly,定义scrolly中所用figure元素叫figure,article叫article
+		//定义所有article中class为step的元素叫step
+		
+		var main = d3.select("main");
+		var scrolly = main.select("#scrolly");
+		var figure = scrolly.select("figure");
+		var article = scrolly.select("article");
+		var step = article.selectAll(".step");
+
+		// initialize the scrollama
+		var scroller = scrollama();
+
+		let videoElements = document.querySelectorAll('video.bg-video');
+			// Pause all the videos except for the one with id="1"
+			//length在这里标识前面这个变量中的元素数目， i++是为了让i增加，使得循环结束
+			for (let i = 0; i < videoElements.length; i++) {
+  			let video = videoElements[i];
+    				video.pause();
+					video.style.opacity = 0;
+  				}
+
+		// generic window resize listener event,让内容大小随着窗口变化而变化
+		function handleResize() {
+			// 1. update height of step elements，Math.floor是指向下取整一个最接近的数
+			var stepH = Math.floor(window.innerHeight * 0.85);
+			step.style("height", stepH + "px");
+			
+			// 定一下figure的高度和到顶部的距离
+			var figureHeight = window.innerHeight / 2;
+			var figureMarginTop = (window.innerHeight - figureHeight) / 2;
+
+			// 使用这两个变量来定距离
+			figure
+				.style("height", figureHeight + "px")
+				.style("top", figureMarginTop + "px");
+
+			// 3. tell scrollama to update new element dimensions
+			scroller.resize();
+		}
+
+		// scrollama event handlers
+		function handleStepEnter(response) {
+			console.log(response);
+			// response = { element, direction, index }
+
+			// add color to current step only
+			step.classed("is-active", function (d, i) {
+				return i === response.index;
+			});
+
+			var In = response.index;
+			var videoId = "bg-video" + In
+			let backgroundVideo = document.getElementById(videoId);
+			// Get all the video elements on the page
+			let videoElements = document.querySelectorAll('video.bg-video');
+			// Pause all the videos except for the one with id="1"
+			//length在这里标识前面这个变量中的元素数目， i++是为了让i增加，使得循环结束
+			for (let i = 0; i < videoElements.length; i++) {
+  			let video = videoElements[i];
+  				if (video.id === videoId) {
+    				video.play();
+					video.style.opacity = 1;
+ 					} else {
+    				video.pause();
+					video.style.opacity = 0;
+  					}
+			}
+
+			// update graphic based on step
+     	 	// figure.select("video").video(response.index + 1);
+			// figure.select("p").text(response.index + 1);
+		}
+
+
+		function init() {
+
+			// 1. force a resize on load to ensure proper dimensions are sent to scrollama
+			handleResize();
+
+			// 2. setup the scroller passing options
+			// 		this will also initialize trigger observations
+			// 3. bind scrollama event handlers (this can be chained like below)
+			scroller
+				.setup({
+					step: "#scrolly article .step",
+					offset: 0.33,
+					debug: false
+				})
+				.onStepEnter(handleStepEnter);
+		}
+
+		// kick things off
+		init();
+	</script>
+
+
+</body>
+</html>
