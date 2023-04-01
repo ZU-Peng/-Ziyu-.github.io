@@ -207,14 +207,14 @@ function drawScatterPlot(data) {
         // using d3.format()
         // See: https://github.com/d3/d3-format/blob/v3.1.0/README.md#format
 
-        let displayValue = d3.format(",")(d.pop);
+        let displayValue = d3.format(",")(d.Frequncy);
         
         // Make the tooltip visible when mouse "enters" a point
         tooltip.style("visibility", "visible")
             .style("top", `${y}px`)
             .style("left", `${x}px`)
             // This is just standard HTML syntax
-            .html(`<p><b>${d.country}</b><br><em>${d.continent}</em><br>#: ${displayValue}</p>`);
+            .html(`<p><b>${d.Frequncy}</b><br><em>${d.Regulations}</em><br>#: ${displayValue}</p>`);
 
         // Optionally, visually highlight the selected circle
         points.attr("opacity", 0.1);

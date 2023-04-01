@@ -85,10 +85,22 @@ h2.headline {
     font-family: "Staff-Bold","Arial",sans-serif;
     color:#b1d715;
 }
-.container{
-  width: 50%;
-  margin:auto auto auto auto;
+
+@media only screen and (min-width:680px) {
+  .container{
+    width: 100%;
+    margin:auto auto auto auto;
+  }
+  
 }
+@media only screen and (min-width:681px) {
+  .container{
+    width: 100%;
+    margin:auto auto auto auto;
+  }
+  
+}
+
 block.quote{
   font-size: xx-large;
   font-family: "Staff-Bold","Arial",sans-serif;
