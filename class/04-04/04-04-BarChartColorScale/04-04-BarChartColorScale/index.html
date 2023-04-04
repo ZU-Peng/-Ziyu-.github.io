@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=”utf-8” />
+        <title>Gradient Color Scales</title>
+
+        <link rel="stylesheet" type="text/css" href="./style/styles.css">
+
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+    </head>
+    <body>
+
+        <div>
+            <h1>Gapminder Dataset: Life Expectancy Chart</h1>
+
+            <svg id="chart">
+                <g id="scale">
+                    <defs>
+                        <!-- We are going to control this linear gradient object with JavaScript -->
+                        <linearGradient id="colorGradient">
+                            <!-- <stop offset="5%" stop-color="#F60" />
+                            <stop offset="90%" stop-color="#FF6" /> -->
+                        </linearGradient>
+                    </defs>
+        
+                    <!-- This rectangle is filled using a linear gradient, and controlled with JavaScript -->
+                    <rect id="scaleRect" fill="url(#colorGradient)" stroke="black" stroke-width="2"/>
+                    <g id="scaleAxis"></g>
+                </g>
+            </svg>
+        </div>
+
+        <script src="./scripts/script.js"></script>
+    </body>
+</html>

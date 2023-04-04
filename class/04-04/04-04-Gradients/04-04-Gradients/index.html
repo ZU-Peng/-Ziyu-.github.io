@@ -1,0 +1,70 @@
+<!-- A simple demonstration of color gradients in SVG: 
+    linear gradients and radial gradients -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+
+    <svg width="400" height="300">
+        <desc>Example 1 - fill a rectangle using a 
+                linear gradient paint server</desc>
+        <g>
+            <defs>
+                <linearGradient id="MyGradient1">
+                    <stop offset="5%" stop-color="#F60" />
+                    <stop offset="90%" stop-color="#FF6" />
+                </linearGradient>
+            </defs>
+
+            <!-- Outline the container area in blue -->
+            <rect fill="none" stroke="blue" 
+                x="1" y="1" width="260" height="110"/>
+
+            <!-- The container is filled using a linear gradient -->
+            <rect fill="url(#MyGradient1)" stroke="black" stroke-width="2"  
+                x="20" y="20" width="220" height="70"/>
+        </g>
+    </svg>
+
+    <svg width="400" height="300">
+        <desc>Example 2 - fill a rectangle using a 
+                radial gradient paint server</desc>
+        <g>
+            <defs>
+                <!-- gradientUnits = "userSpaceOnUse | objectBoundingBox"
+                Defines the coordinate system for attributes ‘cx’, ‘cy’, ‘r’, ‘fx’ and ‘fy’.
+                If gradientUnits="userSpaceOnUse", ‘cx’, ‘cy’, ‘r’, ‘fx’ and ‘fy’ represent values 
+                in the coordinate system that results from taking the current user coordinate system 
+                in place at the time when the gradient element is referenced (i.e., the user coordinate 
+                system for the element referencing the gradient element via a ‘fill’ or ‘stroke’ property) 
+                and then applying the transform specified by attribute ‘gradientTransform’. 
+
+                ‘cx’, ‘cy’ and ‘r’ define the largest (i.e., outermost) circle for the radial gradient. 
+                The gradient will be drawn such that the 100% gradient stop is mapped to the perimeter of 
+                this largest (i.e., outermost) circle.
+
+                ‘fx’ and ‘fy’ define the focal point for the radial gradient. 
+                The gradient will be drawn such that the 0% gradient stop is mapped to (fx, fy).-->
+                <radialGradient id="MyGradient2" gradientUnits="userSpaceOnUse"
+                            cx="130" cy="50" r="55" fx="130" fy="50">
+                    <stop offset="0%" stop-color="red" />
+                    <stop offset="50%" stop-color="blue" />
+                    <stop offset="100%" stop-color="red" />
+                </radialGradient>
+            </defs>
+
+            <!-- Outline the container area in blue -->
+            <rect fill="none" stroke="blue" 
+                x="1" y="1" width="260" height="110"/>
+
+            <!-- The container is filled using a linear gradient -->
+            <rect fill="url(#MyGradient2)" stroke="black" stroke-width="2"  
+                x="20" y="20" width="220" height="70"/>
+        </g>
+    </svg>
+
+  </body>
+</html>

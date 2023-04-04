@@ -1,0 +1,189 @@
+/* --------------  LOAD FONTS FROM SERVER ------------------------------ */
+/* ---- The font-family defines the name that will be used in CSS ------ */ /* --------along with a source with location and  font file name ---- */
+@font-face {
+    font-family: "IvarHeadline-Regular";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarHeadline-Regular.woff2);
+   }  
+   @font-face {
+    font-family: "IvarHeadline-Italic";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarHeadline-Italic.woff2);
+   } 
+   @font-face {
+    font-family: "IvarHeadline-Bold";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarHeadline-Bold.woff2);
+   }  
+   @font-face {
+    font-family: "IvarHeadline-BoldItalic";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarHeadline-Italic.woff2);
+   } 
+   @font-face {
+    font-family: "IvarText-Regular";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarText-Regular.woff2);
+   } 
+   @font-face {
+    font-family: "IvarText-Italic";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarText-Regular.woff2);
+   }
+   @font-face {
+    font-family: "IvarText-Bold";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarText-Bold.woff2);
+   }
+   @font-face {
+    font-family: "Staff-Regular";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/Staff-Regular.woff2);
+   }  
+   @font-face {
+    font-family: "Staff-Italic";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/Staff-Italic.woff2);
+   } 
+   @font-face {
+    font-family: "Staff-Bold";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/Staff-Bold.woff2);
+   }  
+   @font-face {
+    font-family: "Staff-BoldItalic";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/Staff-BoldItalic.woff2);
+   } 
+   @font-face {
+    font-family: "Carrie-Regular";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/VTCCarrie-Regular.woff2);
+   } 
+   
+   /* ------------------ EMANCIPATOR COLORS ---------------------------------------- */
+   /* FOREST #31463F */
+   /* ROSE #CD395B */
+   /* FOREST #31463F */
+   /* PINK #F6B0A0 */
+   /* PUTTY #F6F2E1 */
+   /* SKY #BADEFC */
+   /* BLACK #1C1C1C */
+   /* HIGHLIGHTER #EBF952 
+   gold#FBC24C*/
+
+   h1{
+    color: #000000;
+    font-weight: 400;
+    font-family:"Ivar Headline","Georgia","Times","Times New Roman",serif; ;
+    font-size: 46px;
+    line-height: 52px;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    text-align: center;
+    padding-top: 8px;
+  }
+
+  h2{
+    color: #000000;
+    font-weight: 400;
+    font-family:"Staff","Helvetica","Arial","sans-serif";
+    font-size: 26px;
+    line-height: 36px;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    text-align: center;
+    padding-top: 8px;
+    
+  }
+
+  p.drop:first-letter {
+    font-family: "Miller","Georgia","Times","Times New Roman",serif;
+    padding-right: 16px;
+    font-size: 5em;
+    float: left;
+    margin-top: 8px;
+    line-height: .9em;
+    }
+
+  .text p{
+    color: #000000;
+    font-family: "Ivar Text","Georgia","Times","Times New Roman","serif";
+    font-size: 18px;
+    max-width: 50%;
+    margin:20px auto 20px auto;
+    line-height: 1.8;
+  }
+
+  h2{
+    max-width: 50%;
+    margin: 0 auto 0 auto;
+    font-family:"Ivar Text","Georgia","Times","Times New Roman",serif;
+    font-size: 1.5em;
+    color: #000000;
+    padding-top: 8px;
+    line-height: 1;
+    text-align: center;
+    width: 50%;
+  }
+
+  .container{
+    width: 50%;
+  }
+  
+
+  .header img{
+    margin:20px auto 20px auto;
+    height: 100%;
+    width: 100%;
+
+  }
+  
+
+  .text span{
+    color: #CD395B;
+    font-family:"Ivar Text","Georgia","Times","Times New Roman",serif;
+    font-size: auto;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    max-width: 80%;
+    margin: auto auto 50px auto;
+    text-align: center;
+    background-color:#F6F2E1;
+  }
+  
+  .grid-item {
+    width: 480px;
+    height: 270px;
+  }
+  .grid-item video{
+    margin:auto auto auto auto;
+    padding-top: 5%;
+  }
+
+  #text {
+    background-image: url('./BGP1.png');
+    padding-top: 15px;
+  }
+
+  #video {
+    background-image: url('./BGP2.png');
+    padding-top: 15px;
+  }
+
+  figure {
+
+
+
+
+  }
+
+  figure img {
+    float: right;
+    width: 20%;
+    border-radius: 20px 20px 20px 20px;
+    margin: 20px 20% 20px 20px;
+  }
+
+  figure figcaption {
+    margin: auto auto auto auto;
+    text-align: center;
+    float: right;
+    width: 30%;
+  }
+
