@@ -340,3 +340,31 @@
 
 </body>
 </html>
+
+<!-- <figure>
+					<img src="./image/Jessica headshot.png">
+					<figcaption>Jessica Hedges</figcaption>
+				</figure> -->
+
+				figure img {
+					/* float: right; */
+					width: 70%;
+					border-radius: 20px 20px 20px 20px; 
+					margin: 0 auto 0 auto;
+				  }
+				
+				  figure p {
+					/* float: right; */
+					border-radius: 20px 20px 20px 20px; 
+					 margin: 0 0 0 0;
+					 font-size: 100px; 
+				  }
+				
+				  figure figcaption {
+					caption-side: bottom;
+					text-align:start;
+					font-size: 14px;
+					display: block;
+					margin: 0 auto 0 auto;
+					font-family: "Staff",Helvetica,Arial,sans-serif;
+				}

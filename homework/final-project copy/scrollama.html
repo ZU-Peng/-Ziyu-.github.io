@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Scrollama: Sticky Overlay Example</title>
+    <meta name="description" content="Scrollama: Sticky Overlay Example" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.0.4/scrollama.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>
+    <style>
+      p {
+    color: #000000;
+    font-family: "Ivar Text","Georgia","Times","Times New Roman","serif";
+    font-size: 20px;
+    max-width: 50%;
+    margin:20px auto 20px auto;
+    line-height: 2;
+      }
+
+      p.drop:first-letter {
+        font-family: "Miller","Georgia","Times","Times New Roman",serif;
+        padding-right: 16px;
+        font-size: 5em;
+        float: left;
+        margin-top: 8px;
+        line-height: .9em;
+        }
+      #scrolly {
+        position: relative;
+        background-color: #f3f3f3;
+        padding: 1rem;
+      }
+
+      article {
+        position: relative;
+        padding: 0;
+        max-width: 20rem;
+        margin: 0 auto;
+      }
+
+      figure {
+        position: -webkit-sticky;
+        position: sticky;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        background-color: #d7cbb0;
+        z-index: 0;
+        background-image: url('./pictures/P1.png');
+        background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size:contain;
+      }
+
+      .step {
+        margin: 0 -80% 2rem 80%;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
+      .step:last-child {
+        margin-bottom: 0;
+      }
+
+      .step.is-active h2 {
+        font-family: "Ivar Text","Georgia","Times","Times New Roman","serif";
+        background-color:aquamarine;
+        color: #3b3b3b;
+      }
+
+      .step h2 {
+        font-family: "Ivar Text","Georgia","Times","Times New Roman","serif";
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.5rem;
+        background-color: #3b3b3b;
+      }
+      .step h3 {
+        font-family: "Ivar Text","Georgia","Times","Times New Roman","serif";
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.5rem;
+      }
+    </style>
+     <style>
+        * {
+          box-sizing: border-box;
+          padding: 0;
+          margin: 0;
+        }
+  
+        .container {
+          display: flex;
+          overflow-x: scroll;
+        }
+  
+        .page {
+          width: 100vw;
+          height: 100vh;
+          flex-shrink: 0;
+        }
+  
+        .page1 {
+          width: 200vw;
+          height: 100vh;
+          flex-shrink: 0;
+        }
+  
+        .page1:nth-child(1) {
+          /* background: hsl(140deg, 50%, 50%); */
+          background-image:url(./pictures/RSBG.png) ;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size:cover;
+        }
+  
+        .page1 img {
+          margin-left: 1480px;
+        }
+        #chart{
+          margin-left: 23%;
+        }
+        .text{
+          padding-top: 5rem;
+          padding-bottom: 5rem;
+background-color: rgb(199, 255, 164);
+        }
+        .text2{
+          padding-top: 5rem;
+          padding-bottom: 5rem;
+background-color: rgb(253, 255, 164);
+        }
+      </style>
+  </head>
+
+  <body>
+    
+    <main>
+     
+      <section>
+        <div class="container">
+            <div class="page1">
+                <img src="./pictures/RSTEXT.png" width="50%">
+            </div>
+          </div>
+      </section>
+
+      <section>
+        <div class="text">
+        <p class="drop">Over 2022, Boston has conducted thousands of restaurant inspections, with the goal of ensuring that establishments comply with health and safety regulations. These inspections evaluate various aspects of the restaurant, including food storage and handling, sanitation, and cleanliness. Inspection results are publicly available and provide valuable insights into the performance of restaurants in Boston. By analyzing these records, we can identify trends, areas of improvement, and potential health risks, which can help us make informed decisions about where to eat and how to improve the dining experience for everyone.</p>
+        <p>The map of failed restaurant inspections in Boston 2022 is an important tool for identifying areas with health and safety violations. This information helps health officials target resources to the most pressing needs and can lead to improved standards for the foodservice industry. Customers can also use this information to make informed dining decisions and demand higher standards from restaurants.</p>
+      </div>
+      </section>
+      
+
+      <section id="scrolly">
+        <figure>
+    
+        </figure>
+
+        <article>
+          <div class="step" data-step="1">
+            <h2>The active restaurants in Boston 2022</h2>
+          <h3>In 2022, 2789 restaurants in Boston are active and have been inspected.</h3>
+          </div>
+          <div class="step" data-step="2">
+            <h2>Restaurants passed the inspections</h2>
+          <h3>2471 restaurants passed their inspections step by step</h3>
+          </div>
+          <div class="step" data-step="3">
+          <h2>Restaurants passed with one try </h2>
+          <h3>Only 22 restaurants passed inspections with only one try</h3>
+          </div>
+          <div class="step" data-step="4">
+            <h2>Failed, changed, passed</h2>
+          <h3>2449 of them failed a few times at first, but they finally passed inspections by making changes</h3>
+          </div>
+          <div class="step" data-step="5">
+            <h2>Those who still didn’t pass</h2>
+            <h3>But there are still 318 restaurants that didn’t pass the inspections </h3>  
+          </div>
+        </article>
+      </section>
+
+      <section>
+        <div class="text2">
+        <p>One of the most commonly violated regulations in Boston restaurants is related to food storage and handling. Many violations are related to improper storage of food at incorrect temperatures, such as leaving food out at room temperature for too long or failing to refrigerate perishable items. Another common violation is the improper labeling of food items, which can lead to confusion and potential health risks for customers. These violations can lead to the growth of harmful bacteria and can cause foodborne illnesses. Restaurants found in violation of these regulations may receive a conditional pass or fail grade and may be subject to fines and closure until the issues are resolved.</p>
+        <p>Another frequently violated regulation in Boston restaurants is related to sanitation and cleanliness. This can include violations such as not properly cleaning and sanitizing cooking equipment and utensils, failing to maintain clean floors and surfaces, and inadequate handwashing practices. These violations can lead to the growth of harmful bacteria and increase the risk of food contamination. Restaurants found in violation of these regulations may also receive a conditional pass or fail grade and may be subject to fines and closure until the issues are resolved. It's essential for restaurants to prioritize and maintain high levels of cleanliness and sanitation to ensure the safety and well-being of their customers.</p>
+
+        <div id="chart"></div>
+        <script src="./scripts/script.js"></script>
+
+        <p>In summary, taking a deep dive into Boston's restaurant inspection records over the past five years is like peeling back the curtain on the city's culinary scene. Sure, it might not be as exciting as trying out a new restaurant, but it's important nonetheless. By analyzing this data, we can uncover the hot spots with the most frequent violations and work to improve the overall safety and hygiene of our dining experiences. So, let's roll up our sleeves and get to work making Boston's food scene even better!</p>
+      </div>
+      </section>
+    </main>
+
+    <!-- <div class='debug'></div> -->
+    <script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="../stickyfill.min.js"></script>
+    <script src="../scrollama.min.js"></script>
+    <script>
+      // using d3 for convenience
+      var main = d3.select("main");
+      var scrolly = main.select("#scrolly");
+      var figure = scrolly.select("figure");
+      var article = scrolly.select("article");
+      var step = article.selectAll(".step");
+
+      // initialize the scrollama
+      var scroller = scrollama();
+
+      // generic window resize listener event
+      function handleResize() {
+        // 1. update height of step elements
+        var stepH = Math.floor(window.innerHeight * 0.75);
+        step.style("height", stepH + "px");
+
+        var figureHeight = window.innerHeight ;
+        var figureMarginTop = (window.innerHeight - figureHeight) / 2;
+
+        figure
+          .style("height", figureHeight + "px")
+          .style("top", figureMarginTop + "px");
+
+        // 3. tell scrollama to update new element dimensions
+        scroller.resize();
+      }
+
+      // scrollama event handlers
+      function handleStepEnter(response) {
+        console.log(response);
+        // response = { element, direction, index }
+
+        // add color to current step only
+        step.classed("is-active", function(d, i) {
+          return i === response.index;
+        });
+
+        // update graphic based on step
+        // figure.select("p").text(response.index + 1);
+        var In = response.index + 1;
+
+       var BGId = "url('./pictures/P" + In + ".png')"
+       console.log(BGId)
+       figure.style("background-image", BGId);
+      }
+       
+
+      function setupStickyfill() {
+        d3.selectAll(".sticky").each(function() {
+          Stickyfill.add(this);
+        });
+      }
+
+      function init() {
+        setupStickyfill();
+
+        // 1. force a resize on load to ensure proper dimensions are sent to scrollama
+        handleResize();
+
+        // 2. setup the scroller passing options
+        // 		this will also initialize trigger observations
+        // 3. bind scrollama event handlers (this can be chained like below)
+        scroller
+          .setup({
+            step: "#scrolly article .step",
+            offset: 0.33,
+            // debug: true
+          })
+          .onStepEnter(handleStepEnter);
+
+        // setup resize event
+        window.addEventListener("resize", handleResize);
+      }
+
+      // kick things off
+      init();
+    </script>
+    <script>
+        let container = document.querySelector(".container");
+        container.addEventListener("wheel", (event) => {
+          event.preventDefault();
+          container.scrollLeft += event.deltaY;
+        });
+      </script>
+  </body>
+</html>

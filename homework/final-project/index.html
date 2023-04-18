@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/FP-style" />
+    <title>JS 实现鼠标滚轮横向滚动特效</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      .container {
+        display: flex;
+        overflow-x: scroll;
+      }
+
+      .page {
+        width: 100vw;
+        height: 100vh;
+        flex-shrink: 0;
+      }
+
+      .page1 {
+        width: 200vw;
+        height: 100vh;
+        flex-shrink: 0;
+      }
+
+      .page1:nth-child(1) {
+        /* background: hsl(140deg, 50%, 50%); */
+        background-image:url(./pictures/RSBG.png) ;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+
+      .page:nth-child(2) {
+        background: hsl(210deg, 50%, 50%);
+      }
+
+      .page:nth-child(3) {
+        background: hsl(270deg, 50%, 50%);
+      }
+
+      .page1 img {
+        margin-left: 1280px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="page1">
+            <img src="./pictures/RSTEXT.png" width="50%">
+        </div>
+        <div class="page">Page2</div>
+        <div class="page">Page3</div>
+      </div>
+    </main>
+    <script>
+      let container = document.querySelector(".container");
+      container.addEventListener("wheel", (event) => {
+        event.preventDefault();
+        container.scrollLeft += event.deltaY;
+      });
+    </script>
+  </body>
+</html>

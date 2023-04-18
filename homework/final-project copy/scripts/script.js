@@ -1,5 +1,51 @@
+/*
 
-d3.csv("./data/gapminder.csv").then(function(data) {
+    ARTG5330 Visualization Technologies 1
+    February 21, 2023
+    Spring Semester
+    Week 7
+
+    - What is the "./data/gapminder.csv" inside of the parentheses 
+    for d3.csv() referring to?
+
+    It is referring to a dataset given in csv filetype provided by
+    Gapminder that is stored locally inside the folder called "data".
+    You need to provide the exact local path to that csv file to
+    fetch it with the d3.csv() method.
+
+    - The parameter named `data` inside of the function expression .then()
+
+    The parameter named `data` binds to the csv file
+    you fetch with the d3.csv method. Thus, it refers
+    to the gapminder.csv file.
+
+    - What kind of JavaScript data structure is `data`?
+
+    An array of objects.
+
+    - Where does the entire d3.csv().then() pattern
+        open and close in this document?
+
+    Use the VSCode interface to locate the opening
+    and closing of the d3.csv().then() pattern.
+
+    You may find it useful to examine the contents
+    of `data` with console.log(data).
+
+*/
+// function ParseCsv(z){
+//     if(+z.Rank >=1){
+//         return{
+//         Rank: z.Rank,
+//         Content: z.Content,
+//         Regulations: z.Regulations,
+//         Frequncy: z.Frequncy,   
+//         }
+//     }
+// }
+// console.log(Rank)
+
+d3.csv("./data/PPP.csv").then(function(datavis) {
 
     /*
     1. DEFINE DIMENSIONS OF SVG + CREATE SVG CANVAS
@@ -28,15 +74,19 @@ d3.csv("./data/gapminder.csv").then(function(data) {
         The d
     */
 
-    const width = document.querySelector("#chart").clientHeight;
-    const height = document.querySelector("#chart").clientWidth;
+    const width = 800;
+    const height = 500;
+
+    const tooltip = d3.select("#chart")
+    .append("div")
+    .attr("class", "tooltip");
 
     // Initializing the viewport of the SVG canvas
     // An SVG Canvas's Viewport has a "width" and "height"
     const svg = d3.select("#chart")
         .append("svg")
-        .attr("width", height)
-        .attr("height", width);
+        .attr("width", width)
+        .attr("height", height);
 
 
     /* 
@@ -93,11 +143,11 @@ d3.csv("./data/gapminder.csv").then(function(data) {
 
     */
 
-    let filtered_data = data.filter(function(d) {
+    // let filtered_data = data.filter(function(d) {
 
-        return d.country === 'Thailand';
+    //     return d.country === 'Cuba';
 
-    });
+    // });
 
 
     /*
@@ -141,13 +191,13 @@ d3.csv("./data/gapminder.csv").then(function(data) {
 
     */
 
-    const pop = {
+    const freq = {
         
-        min: d3.min(filtered_data, function(d) { return +d.pop; }),
-        max: d3.max(filtered_data, function(d) { return +d.pop; })
+        min: d3.min(datavis, function(z) { return +z.Frequncy; }),
+        max: d3.max(datavis, function(z) { return +z.Frequncy; })
 
     };
-
+   
     /*
     4. CREATE SCALES
 
@@ -200,20 +250,22 @@ d3.csv("./data/gapminder.csv").then(function(data) {
     */
 
     const margin = {
-        top: 5, 
+        top: 50, 
         left: 100, 
-        right: -800, 
-        bottom: 1000
+        right: 50, 
+        bottom: 100
     };
 
-    const xScale = d3.scaleLinear()
-    .domain([50, pop.max])
-    .range([margin.left, width - margin.right]);
+    const xScale = d3.scaleBand()
+        .domain(["Top1","Top2","Top3","Top4","Top5"])
+        .range([margin.left, width - margin.right])
+        .padding(0.1);
 
-    const yScale = d3.scaleBand()
-        .domain(["1952","1957","1962","1967","1972","1977","1982","1987","1992","1997","2002","2007"])
-        .range([height - margin.bottom, margin.top])
-        .padding(0.5);
+    const yScale = d3.scaleLinear()
+        .domain([50, freq.max])
+        .range([height - margin.bottom, margin.top]);
+
+
     /*
     5. DRAW AXES
     
@@ -338,16 +390,17 @@ d3.csv("./data/gapminder.csv").then(function(data) {
         happens to the bar chart as you add or remove the terms of the expression.
 
     */
-
+console.log(freq)
     const points = svg.selectAll("rect")
-        .data(filtered_data)
+        .data(datavis)
         .enter()
         .append("rect")
-            .attr("y", function(d) { return yScale(d.year); })
-            .attr("x", function(d) { return xScale(d.pop); })
-            .attr("width", function(d) { return height - (20,margin.bottom) })
-            .attr("height", yScale.bandwidth(),margin.left)
+            .attr("x", function(z) { return xScale(z.Rank); })
+            .attr("y", function(z) { return yScale(z.Frequncy); })
+            .attr("width", xScale.bandwidth())
+            .attr("height", function(z) { return height - (margin.bottom + yScale(z.Frequncy)) })
             .attr("fill", "orange");
+    
     
     /*
     7. DRAW AXIS LABELS
@@ -378,13 +431,59 @@ d3.csv("./data/gapminder.csv").then(function(data) {
         .attr("class","axisLabel")
         .attr("x", width/2)
         .attr("y", height-margin.bottom/2)
-        .text("Frequncy");
+        .text("Rank");
 
     const yAxisLabel = svg.append("text")
         .attr("class","axisLabel")
         .attr("transform","rotate(-90)")
         .attr("x", -height/2)
-        .attr("y", margin.left/2)
-        .text("Rank");
+        .attr("y", margin.left/4)
+        .text("Frequncy");
 
+
+
+    points.on("mouseover", function(e, z) {
+
+    // Update style and position of the tooltip div;
+    // what are the `+` symbols doing?
+
+    // You may increase/decrease the relative position 
+    // of the tooltip by adding small +- values (e.g., +20, -10). 
+    // Note, the tooltip's origin is its top-left point.
+
+    let x = +d3.select(this).attr("cx") + 10;
+    let y = +d3.select(this).attr("cy") + 20;
+
+    // Format the display of the numbers,
+    // using d3.format()
+    // See: https://github.com/d3/d3-format/blob/v3.1.0/README.md#format
+
+    let displayValue = d3.format(",")(z.Frequncy);
+    
+    // Make the tooltip visible when mouse "enters" a point
+    tooltip.style("visibility", "visible")
+        .style("top", `${y}px`)
+        .style("left", `${x}px`)
+       
+        // This is just standard HTML syntax
+        .html(`<p><b>${"Description:"+z.Content}</b><br><em>${"Requlation:"+z.Regulations}</em><br>#: ${"Frequncy:"+displayValue}</p>`);
+
+    // Optionally, visually highlight the selected circle
+    points.attr("opacity", 0.1);
+    d3.select(this)
+        .attr("opacity", 1)
+        .style("stroke", "black")
+        .style("stroke-width", "1px")
+        // this makes the selected circle "pop out" and stand over the rest of the circles
+        .raise();
+
+}).on("mouseout", function() {
+
+    // Make the tooltip invisible when mouse "leaves" a point
+    tooltip.style("visibility", "hidden");
+
+    // Reset the circles' appearance back to original
+    points.attr("opacity", 1);
+
+});
 });

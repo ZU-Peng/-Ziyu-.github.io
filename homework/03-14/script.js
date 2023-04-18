@@ -63,8 +63,8 @@ d3.csv("./Pivit table for violation - Sheet2.csv").then(function(data) {
         The d
     */
 
-    const width = document.querySelector("#chart").clientWidth;
-    const height = document.querySelector("#chart").clientHeight;
+    const width = 800;
+    const height = 400;
 
     const tooltip = d3.select("#chart")
     .append("div")
@@ -77,7 +77,7 @@ d3.csv("./Pivit table for violation - Sheet2.csv").then(function(data) {
         .attr("width", width)
         .attr("height", height);
 
-
+        
     /* 
     2. FILTER THE DATA 
     
@@ -240,7 +240,7 @@ d3.csv("./Pivit table for violation - Sheet2.csv").then(function(data) {
 
     const margin = {
         top: 50, 
-        left: 100, 
+        left: 500, 
         right: 50, 
         bottom: 100
     };

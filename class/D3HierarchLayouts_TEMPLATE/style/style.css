@@ -1,0 +1,23 @@
+div {
+  text-align: center;
+}
+
+body {
+  font-family: Sans-Serif;
+}
+
+line{
+  fill:none;
+  stroke: black;
+  stroke-width: 4;
+}
+
+circle {
+  fill: aquamarine;
+  stroke: none;
+}
+
+text {
+	font-size: 12px;
+	text-anchor: middle;
+}
