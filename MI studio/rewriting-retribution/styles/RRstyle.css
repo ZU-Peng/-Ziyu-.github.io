@@ -1,0 +1,580 @@
+
+/*------------------- HEADER STYLES---------------------------------------------------*/
+/* move header down */
+.header1 {
+  padding: 10px 0 0px 0;
+    margin: 0;
+    background-color: #31463F;
+      height: 70px;
+      position: sticky;
+      top:0;
+  }
+  .emancipator-description {
+      background-color: #BADEFC;
+      padding:11px 15px;
+      margin: 0 20px 50px 20px;
+      height: 50px;
+  }
+  .emancipator-description p {
+          font-family: "Staff-Bold","Arial",sans-serif;
+          font-size: 15px;
+          margin-top: -1px;
+  }
+  /*------------------- FOOTER STYLES ---------------------------------------------------*/
+  @media only screen and (max-width:600px) {
+      /* FULL-WIDTH FOR MOBILE */
+  .footer {
+      background-color: #F6F2E1;
+      padding: 25px 50px;
+      display:block;
+      margin-top: 50px;
+      }
+  }
+  @media only screen and (min-width:601px) {
+          /* SPLIT INTO THREE COLUMNS FOR LARGER SCREENS */
+  .footer {
+      background-color: #F6F2E1;
+      padding: 25px 50px;
+      display:grid;
+      grid-template-columns: 33% 12% 12% ;
+      grid-column-gap: 4em;
+      margin-top: 50px;
+      }
+  }
+  .footer img {
+      width: 50%;
+  }
+  .footer .boilerplate p {
+      font-family: "IvarText-Regular","TimesNewRoman",serif;
+      font-size: 12px;
+      line-height: 1.8;
+  }
+  .footer .footerbold p {
+      font-family: "Staff-Bold","Arial-Bold",sans-serif;
+      font-size: 12px;
+      line-height: 1.8;
+  }
+  /* --------------  OVERALL SITE STYLES ------------------------------ */
+  .body {
+      width:100%;
+      color: #1c1c1c;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/* ---- The font-family defines the name that will be used in CSS ------ */ /* --------along with a source with location and  font file name ---- */
+@font-face {
+    font-family: "IvarHeadline-Regular";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarHeadline-Regular.woff2);
+   }  
+   @font-face {
+    font-family: "IvarHeadline-Italic";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarHeadline-Italic.woff2);
+   } 
+   @font-face {
+    font-family: "IvarHeadline-Bold";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarHeadline-Bold.woff2);
+   }  
+   @font-face {
+    font-family: "IvarHeadline-BoldItalic";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarHeadline-Italic.woff2);
+   } 
+   @font-face {
+    font-family: "IvarText-Regular";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarText-Regular.woff2);
+   } 
+   @font-face {
+    font-family: "IvarText-Italic";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarText-Regular.woff2);
+   }
+   @font-face {
+    font-family: "IvarText-Bold";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/IvarText-Bold.woff2);
+   }
+   @font-face {
+    font-family: "Staff-Regular";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/Staff-Regular.woff2);
+   }  
+   @font-face {
+    font-family: "Staff-Italic";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/Staff-Italic.woff2);
+   } 
+   @font-face {
+    font-family: "Staff-Bold";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/Staff-Bold.woff2);
+   }  
+   @font-face {
+    font-family: "Staff-BoldItalic";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/Staff-BoldItalic.woff2);
+   } 
+   @font-face {
+    font-family: "Carrie-Regular";
+     src: url(https://mediainnovation.camd.northeastern.edu/2022/emancipator/fonts/VTCCarrie-Regular.woff2);
+   } 
+   
+   /* ------------------ EMANCIPATOR COLORS ---------------------------------------- */
+   /* FOREST #31463F */
+   /* ROSE #CD395B */
+   /* FOREST #31463F */
+   /* PINK #F6B0A0 */
+   /* PUTTY #F6F2E1 */
+   /* SKY #BADEFC */
+   /* BLACK #1C1C1C */
+   /* HIGHLIGHTER #EBF952 
+   gold#FBC24C*/
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+margin: 50px auto;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+   h1{
+    color: #000000;
+    font-weight: 400;
+    font-family:"Ivar Headline","Georgia","Times","Times New Roman",serif; 
+    font-size: 46px;
+    line-height: 52px;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    text-align: center;
+    padding-top: 8px;
+  }
+
+
+  h3{
+    color: #000000;
+    font-weight: 400;
+    font-family:"Staff-Bold","Helvetica","Arial","sans-serif";
+    font-size: 18px;
+    line-height: 36px;
+    margin-top: 0px;
+    margin-right: 15%;
+    margin-bottom: 0px;
+    margin-left: 15%;
+    text-align: center;
+    padding-top: 8px;
+  }
+
+  h4{
+    color: #000000;
+      font-family: "Staff-Bold","Helvetica","Arial","sans-serif";
+      font-size: 15px;
+      max-width: 100%;
+      margin:15% 5% 5% 30%;
+      line-height: 1.5;
+  }
+
+  p.drop:first-letter {
+    font-family: "Miller","Georgia","Times","Times New Roman",serif;
+    padding-right: 16px;
+    font-size: 5em;
+    float: left;
+    margin-top: 8px;
+    line-height: .9em;
+    }
+
+  
+
+  .container{
+    width: 50%;
+  }
+  
+
+  .header img{
+    margin:20px auto 20px auto;
+    height: 100%;
+    width: 100%;
+
+  }
+  
+
+  .text h2 span{
+    color: #CD395B;
+    font-family:"Staff-Bold","Arial-Bold",sans-serif;
+    font-size: auto;
+  }
+
+  @media only screen and (max-width:680px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto;
+      max-width: 100%;
+      margin: auto auto auto auto;
+      background-color:#F6F2E1;
+    }
+    .text p{
+      color: #000000;
+      font-family: "IvarText-Regular","Georgia","Times","Times New Roman","serif";
+      font-size: 18px;
+      max-width: 80%;
+      margin:20px auto 20px auto;
+      line-height: 1.8;
+    }
+    h2{
+      color: #000000;
+      font-weight: 400;
+      font-family:"Staff-Bold","Arial-Bold",sans-serif; 
+      font-size: 26px;
+      line-height: 36px;
+      max-width: 90%;
+      margin:20px auto 20px auto;
+      text-align: center;
+      padding-top: 8px;
+    }
+     .grid-item {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      align-self: center;
+    } 
+    #video {
+      background-image: url('./BGP2.png');
+      padding-top: 15px;
+      max-width: 100%;
+      padding-bottom: 15px;
+    }
+    .grid-item video{
+      margin: auto auto auto auto;
+      max-width: 80%;
+      align-self: center;
+    }
+    figure {
+      float: right;
+      max-width: 100%;
+      margin: 20px 10% 20px 20px;
+      background-image: url('./background3.png');
+      padding: 10px 10px 10px 10px;
+    }
+    .text iframe{
+      width:80%;
+      height: 170px;
+      margin: auto auto auto 10%;
+    }
+  }
+
+  @media only screen and (min-width:681px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: space-evenly;
+      max-width: 80%;
+      margin: auto auto auto auto;
+      text-align: center;
+      background-color:#F6F2E1;
+    }
+    .text p{
+      color: #000000;
+      font-family: "IvarText-Regular","Georgia","Times","Times New Roman","serif";
+      font-size: 18px;
+      max-width: 50%;
+      margin:20px auto 20px auto;
+      line-height: 1.8;
+    }
+  h2{
+      color: #000000;
+      font-weight: 400;
+      font-family:"Staff-Bold","Arial-Bold",sans-serif; 
+      font-size: 26px;
+      line-height: 36px;
+      max-width: 90%;
+      margin:20px auto 20px auto;
+      text-align: center;
+      padding-top: 8px;
+    }
+      
+    .grid-item {
+      width: 100%;
+      height: 100%;
+      display: grid;
+    }
+    #video {
+      background-image: url('./BGP2.png');
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    .grid-item video{
+      margin: auto auto auto auto;
+      max-width: 80%;
+      align-self: center;
+    }
+    figure {
+      float: right;
+      max-width: 20%;
+      margin: 20px 10% 20px 20px;
+      background-image: url('./background3.png');
+      padding: 10px 10px 10px 10px;
+    }
+    .text iframe{
+      width:50%;
+      height: 340px;
+      margin: auto auto auto 25%;
+    }
+  }
+
+   
+  
+
+  #text {
+    background-image: url('./BGP1.png');
+    font-family: "Staff-Bold","Arial", sans-serif;
+    padding-top: 15px;
+  }
+
+  #text p{
+    max-width: 80%;
+  }
+
+.flourishcontainer{
+    margin-left: 0;
+    margin-right: 33%;
+    justify-content: center;
+}
+
+ .text a {
+  color: #CD395B;
+  font-weight: normal;
+  border-bottom: 2px solid;
+  font-family: "Staff-Bold",Helvetica,Arial,sans-serif;
+  text-decoration: none;
+}
+
+/* ------------------- TEASERS ---------------------------------- */
+
+h2.teasertitle {
+    font-size:1.2em; 
+    letter-spacing: 2px; 
+    text-transform:uppercase;
+    color:#CD395B
+}
+
+.team1teaser {
+        background-image: url("https://mediainnovation.camd.northeastern.edu/2023/restorativejustice/images/thumbnail-team1.png");
+        background-repeat: no-repeat;
+    background-size:cover;
+  background-position: center; 
+    min-height: 200px;
+    }
+
+.team2teaser {
+        background-image: url("https://mediainnovation.camd.northeastern.edu/2023/restorativejustice/images/thumbnail-team2-turner.png");
+        background-repeat: no-repeat;
+    background-size:cover;
+  background-position: center; 
+    min-height: 200px;
+    }
+
+.team3teaser {
+        background-image: url("https://mediainnovation.camd.northeastern.edu/2023/restorativejustice/images/thumbnail-team3.jpg");
+        background-repeat: no-repeat;
+    background-size:cover;
+  background-position: center; 
+    min-height: 200px;
+    }
+a:link {text-decoration: none}
+
+/* --------------- TEASER FOR MOBILE --------------------------- */
+
+@media only screen and (max-width: 600px) {
+.teaserwrapper {
+    display:block;
+    width:90%;
+    margin:0 auto;
+}
+    
+
+.teaserwrapper a.teaserlink * {
+        text-decoration: none;
+        border-bottom: 0;
+    }
+
+a:link .teaseritem {
+    display:block;
+    background-color: white;
+    text-decoration: none;
+    border: 4px solid #BADEFC;
+    margin-bottom: 30px;
+}
+    
+a:visited .teaseritem {
+    display:block;
+    background-color: white;
+    text-decoration: none;
+    border: 4px solid #BADEFC;
+}
+    
+a:hover .teaseritem {
+    display:block;
+    background-color: #F6F2E1;
+    text-decoration: none;
+    border: 4px solid #CD395B;
+}
+
+.teaseritem img {
+        width: 100%;
+    }
+    
+img.teaserhighlight {
+    width: 150px;
+    margin-left: 33%;
+    position: relative;
+    top:-20px;
+    }
+    
+ a .teaseritem .teaserblock h3 {
+        font-family: "Staff-Bold","Arial-Bold",sans-serif;
+        font-size: 1.5em;
+        line-height: 1.0;
+        color: #1c1c1c; 
+        text-align: center;     
+        padding: -50px 20px 0 20px;
+        margin:0;
+        text-decoration: none;
+    }
+    
+a .teaserblock p {
+        font-family: "IvarText-Regular","Georgia",serif;
+        font-size: 18px;
+        line-height: 1.2;
+        color: #1c1c1c;
+        text-align: center;
+        padding: 0px 20px 20px 20px;
+        margin:0;
+    }   
+}
+
+/* --------------- TEASER FROM MOBILE TO TABLET ------------- */
+
+@media only screen and (min-width: 601px) {
+.teaserwrapper {
+    display:block;
+    width:70%;
+    margin:0 auto;
+}
+    
+.teaserwrapper a.teaserlink {
+        text-decoration: none;
+        border-bottom: 0;
+    }
+
+a:link .teaseritem {
+    display:block;
+    background-color: white;
+    text-decoration: none;
+    border: 4px solid #BADEFC;
+    margin-bottom: 30px;
+}
+    
+a:visited .teaseritem {
+    display:block;
+    background-color: white;
+    text-decoration: none;
+    border: 4px solid #BADEFC;
+}
+    
+a:hover .teaseritem {
+    display:block;
+    background-color: #F6F2E1;
+    text-decoration: none;
+    border: 4px solid #CD395B;
+}
+
+.teaseritem img {
+        width: 100%;
+    }
+    
+img.teaserhighlight {
+    width: 150px;
+    margin-left: 33%;
+    position: relative;
+    top:-20px;
+    }
+    
+ a:link .teaserblock h3 {
+        font-family: "Staff-Bold","Arial-Bold",sans-serif;
+        font-size: 1.2em;
+        line-height: 1.0;
+        color: #1c1c1c; 
+        text-align: center;
+     text-decoration: none;
+        padding: 0px 20px 0 20px;
+        margin:0;
+    }
+    
+a .teaserblock p {
+        font-family: "IvarText-Regular","Georgia",serif;
+        font-size: 16px;
+        line-height: 1.2;
+        color: #1c1c1c;
+        text-align: center;
+        padding: 0px 20px 20px 20px;
+        margin:0;
+    }   
+}
+
+/* --------------- TEASER FROM TABLET to LAPTOP ------------- */
+@media only screen and (min-width: 961px) {
+.teaserwrapper {
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 20px;
+    width:90%;
+    margin:0 auto;
+}
+    
+    .teaserwrapper a.teaserlink {
+        text-decoration: none;
+        border-bottom: 0;
+    }
+
+a:link .teaseritem {
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 0px;
+    background-color: white;
+    text-decoration: none;
+    border: 8px solid #BADEFC;
+}
+    
+a:visited .teaseritem {
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 0px;
+    background-color: white;
+    text-decoration: none;
+    border: 8px solid #BADEFC;
+}
+    
+    a:hover .teaseritem {
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 0px;
+    background-color: #F6F2E1;
+    text-decoration: none;
+    border:8px solid #CD395B;
+}
+}
+
+/* --------------- TEASER FOR DESKTOP AND LARGER ------------- */
+@media only screen and (min-width: 1281px) {
+.teaserwrapper {
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 20px;
+    width:70%;
+    margin:0 auto;
+}
+}
