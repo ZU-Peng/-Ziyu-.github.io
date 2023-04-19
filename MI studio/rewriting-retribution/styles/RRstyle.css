@@ -264,6 +264,11 @@ margin: 50px auto;
       height: 170px;
       margin: auto auto auto 10%;
     }
+    .flourishcontainer{
+      margin-left: 0;
+      margin-right: 16%;
+      justify-content: center;
+  }
   }
 
   @media only screen and (min-width:681px) {
@@ -323,6 +328,11 @@ margin: 50px auto;
       height: 340px;
       margin: auto auto auto 25%;
     }
+    .flourishcontainer{
+      margin-left: 0;
+      margin-right: 33%;
+      justify-content: center;
+  }
   }
 
    
@@ -338,11 +348,7 @@ margin: 50px auto;
     max-width: 80%;
   }
 
-.flourishcontainer{
-    margin-left: 0;
-    margin-right: 33%;
-    justify-content: center;
-}
+
 
  .text a {
   color: #CD395B;
