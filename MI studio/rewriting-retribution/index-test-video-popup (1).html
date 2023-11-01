@@ -1,0 +1,277 @@
+<html>
+    <head>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css' rel='stylesheet' />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    </head>
+    
+    <body>
+    
+
+<!-- ---------------- VIDEO POPUPS ---------------------------- -->
+<style>
+/* FOR MOBILE */
+  @media only screen and (max-width:680px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto;
+      max-width: 100%;
+      margin: auto auto auto auto;
+      background-color:#f6f2e161;
+    }
+
+ .btn{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+   padding-top: 20px;
+  }
+  }
+
+/* FOR TABLET AND LARGER */
+@media only screen and (min-width: 681px) {
+        .grid-container {
+        width: 130%;
+        position: relative;
+        left: -15%;
+      display: grid;
+      grid-template-columns: auto auto;
+      background-color:#f6f2e161;
+    padding: 30px;
+    background-image: url("./styles/BKG4.png");
+/* GIVING THE TRIANGLES */
+    }
+
+.btn .play{
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background: #31463F;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.1s;
+}
+
+.btn .play:hover{
+  background: #CD395B;
+}
+
+
+.btn .play::before
+{
+  content: '';
+  position:absolute;
+  border: 25px solid #FBC24C;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 0px solid transparent;
+  transform: translateX(5px);
+}
+
+.btn .play::before:hover
+{
+  border: 25px solid #ffffff;
+}
+
+.clip
+{
+  position:fixed;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%) scale(0);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  transition: 0.5s;
+}
+
+.clip.active{
+  transition-delay: 0.5s;
+  transform: translate(-50%,-50%) scale(.5); /* TESTING RESIZE */
+}
+
+
+.clip .close{
+  font-weight: 400;
+      font-family:"Staff-Regular","Arial-Bold",sans-serif; 
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #FBC24C;
+}
+
+
+  .btn{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    column-gap: 15px;
+    margin: auto 20px auto 80px;
+  }
+    
+    .shutdown {
+        position:relative;
+        right: 10px;
+        z-index:5;
+    }
+
+    /* MAKE THE SHUTDOWN BTN SHOW UP */
+    b.shutdown {
+    color: #ffffff;
+        font-weight: 400;
+        font-family:"Staff-Regular","Arial-Bold",sans-serif; 
+        font-size: 80px;
+        line-height: 14px;
+        text-align: center;
+        position: relative;
+        padding-bottom: 10px;
+        margin-left: -30px;
+        margin-top: -1100px;
+        width: 80px;
+        height: 80px;
+        background: #31463F;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* GIVE A BORDER TO THE VIDEO SO THE SHUTDOWN BTN WOULD SEEM MORE CONSISTENT, I TRIED TO PUT THIS IN .clip BUT IT DIDN'T WORK */
+    video {
+      border: 10px solid #31463F;
+    }
+  }
+</style>
+
+<div style="width: 50%;margin: 0 auto"> <!-- SIMULATES 50% WIDTH ARTICLE TEXT DIV  -->
+ <p>Under New Hampshire law, Janette Desmond can pay the employees who scoop ice cream and cut fudge at her Portsmouth sweet shop as little as $7.25 an hour.</p>
+
+    <p>But with the state unemployment rate under 2 percent, the dynamics of supply and demand trump the minimum wage: At Ms. Desmond’s store, teenagers working their first summer jobs earn at least $14 an hour.</p>
+    
+<div class="grid-container">
+<div class="btn" id="btn1">
+<div class="play">
+</div>
+</div>
+<div  class="clip" id="clip1">
+<video id="video1" src="https://d32e4p2yfip7hy.cloudfront.net/wp-bostonglobe/20230809/64d3ca895113af7170049ce8/t_2844e70ad8844abb853932c3bc4b6392_name_Janet_Connors/file_1920x1080-5400-v4.mp4" controls class="videoCard"></video>
+							<b class="shutdown" id="shutdown1">&nbsp&nbsp×&nbsp&nbsp</b>
+              <!-- THE width IS NOT SHOWING SO I ADDED SOME SPACE IN IT -->
+						</div>
+					<div class="grid-item" id="text">
+						<h5><b>&OpenCurlyDoubleQuote; As huge as our individual losses [are], the loss to community is even greater.&rdquo;</b></h5>
+						<p style="font-family: 'Staff-Regular',sans-serif">Janet Connors, a restorative justice facilitator</p>
+					</div>
+					
+				</div>
+    
+    <p>Under New Hampshire law, Janette Desmond can pay the employees who scoop ice cream and cut fudge at her Portsmouth sweet shop as little as $7.25 an hour.</p>
+
+    <p>But with the state unemployment rate under 2 percent, the dynamics of supply and demand trump the minimum wage: At Ms. Desmond’s store, teenagers working their first summer jobs earn at least $14 an hour.</p>
+    
+    </div> <!-- CLOSE FAKE ARTICLE TEXT DIV  -->
+
+<script>
+const video1 = document.getElementById("video1");
+const button1 = document.getElementById("btn1");
+const clip1 = document.getElementById("clip1");
+const shutdown1 = document.getElementById("shutdown1");
+
+button1.addEventListener("click", function() {
+    button1.classList.add('active');
+    clip1.classList.add('active');
+    video1.classList.add('active');
+    video1.play();
+    video1.currentTime = 0;
+})
+shutdown1.addEventListener("click", function(){
+    button1.classList.remove('active');
+    clip1.classList.remove('active');
+    video1.pause();
+    })
+
+const video2 = document.getElementById("video2");
+const button2 = document.getElementById("btn2");
+const clip2 = document.getElementById("clip2");
+const shutdown2 = document.getElementById("shutdown2");
+
+button2.addEventListener("click", function() {
+    button2.classList.add('active');
+    clip2.classList.add('active');
+    video2.classList.add('active');
+    video2.play();
+    video2.currentTime = 0;
+})
+shutdown2.addEventListener("click", function(){
+    button2.classList.remove('active');
+    clip2.classList.remove('active');
+    video2.pause();
+    })
+
+const video3 = document.getElementById("video3");
+const button3 = document.getElementById("btn3");
+const clip3 = document.getElementById("clip3");
+const shutdown3 = document.getElementById("shutdown3");
+
+button3.addEventListener("click", function() {
+	button3.classList.add('active');
+	clip3.classList.add('active');
+	video3.classList.add('active');
+	video3.play();
+	video3.currentTime = 0;
+})
+shutdown3.addEventListener("click", function(){
+	button3.classList.remove('active');
+	clip3.classList.remove('active');
+	video3.pause();
+	})
+
+
+const video4 = document.getElementById("video4");
+const button4 = document.getElementById("btn4");
+const clip4 = document.getElementById("clip4");
+const shutdown4 = document.getElementById("shutdown4");
+
+button4.addEventListener("click", function() {
+	button4.classList.add('active');
+	clip4.classList.add('active');
+	video4.classList.add('active');
+	video4.play();
+	video4.currentTime = 0;
+})
+shutdown4.addEventListener("click", function(){
+	button4.classList.remove('active');
+	clip4.classList.remove('active');
+	video4.pause();
+	})
+;
+
+</script>
+
+
+
+    
+    </body>
+
+
+
+
+</html>

@@ -192,6 +192,15 @@
       padding-top: 0px;
       margin-left: 20%;
   }
+  .BTM {
+    padding: 25px 50px;
+    display:grid;
+    grid-template-columns:25% 25% ;
+    grid-column-gap: 6em;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: -9%;
+    }
 }
 @media only screen and (min-width:601px) {
         /* SPLIT INTO THREE COLUMNS FOR LARGER SCREENS */
