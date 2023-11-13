@@ -1,0 +1,1779 @@
+/* ----------------------  LOAD FONTS FROM SERVER ------------------------------ */
+
+@font-face {
+ font-family: "GrotzecCond-Demibold";
+  src: url(https://mediainnovation.camd.northeastern.edu/2021/loveinthetimeofcovid/fonts/GrotzecCond-Demibold3.woff2);
+}  
+
+@font-face {
+ font-family: "GrotzecCond-DemiboldItalic";
+  src: url(https://mediainnovation.camd.northeastern.edu/2021/loveinthetimeofcovid/fonts/GrotzecCond-DemiboldItalic.woff2);
+}  
+
+@font-face {
+ font-family: "LeJeunePoster-Regular";
+  src: url(https://mediainnovation.camd.northeastern.edu/2021/loveinthetimeofcovid/fonts/LeJeunePoster-Regular.otf);
+} 
+
+@font-face {
+ font-family: "LeJeunePoster-RegularItalic";
+  src: url(https://mediainnovation.camd.northeastern.edu/2021/loveinthetimeofcovid/fonts/LeJeunePoster-RegularItalic.otf);
+}
+
+/* ----------------------  BASIC CSS FOR MY STORY ------------------------------ */
+
+* {
+    box-sizing: border-box;
+    
+}
+
+h4{
+  font-size: 36px;
+  text-align: center;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  ;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+p{
+  font-size: 20px;
+  text-align: left;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  ;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+}
+.flourish{
+  margin-left: 10%;
+}
+.articale{
+  width: 50%;
+  margin: 0 auto;
+}
+.mycontainer {
+  width: 100%;
+  margin: 5% auto;
+}
+.section2{
+  margin-top: 150px;
+  
+}
+.youtubevideo{
+  position: relative;
+  margin-left: 30%;
+}
+span.red{
+  color: #890000;
+} 
+span.blue{
+  color: blue;
+}
+span.green{
+  color:green;
+  
+}
+.description{
+  width: 35%;
+  margin-left: 60%;
+  padding: 1px;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0px;
+  z-index: 0;
+  padding-top: 10%;
+  
+}
+
+.red{
+  background-color: rgb(255, 255, 255);
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0px;
+  opacity: 100%;
+}
+.blue{
+  background-color: rgb(255, 255, 255);
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0px;
+  opacity: 100%;
+  /* z-index: 5; */
+}
+.green{
+  background-color: rgb(255, 255, 255);
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0px;
+  
+}
+
+.text3{
+  height: 1500px;
+  position: absolute;
+  /* position: -webkit-sticky; 
+  position: sticky;
+  top: 0; */
+  z-index: 3;
+  /* background: linear-gradient(135deg, #eeffdf, #fc5151); */
+  width: 50%;
+  left: 5%;
+  top: 3em;
+}
+.text3 p{
+  margin-top: 40%;
+  margin-bottom: 80%;
+  background: rgb(255, 255, 255);
+  font-size: 20px;
+  text-align: center;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  ;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+}
+.descriptionandtext{
+  position: relative;
+}
+.text2{
+  height: 2100px;
+  position: absolute;
+  /* position: -webkit-sticky; 
+  position: sticky;
+  top: 0; */
+  z-index: 3;
+  /* background: linear-gradient(135deg, #eeffdf, #fc5151); */
+  width: 50%;
+  left: 5%;
+  top: 0em;
+}
+.text2 p{
+  margin-top: 40%;
+  margin-bottom: 80%;
+  background: rgb(255, 255, 255);
+  font-size: 20px;
+  text-align: center;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  ;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+}
+.photogrid{
+  width: 50%;
+}
+.text1{
+  height: 11000px;
+  position: absolute;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 3;
+
+  width: 50%;
+  left: 25%;
+  top: 3em;
+}
+.text1 p{
+  margin-top: 10%;
+  margin-bottom: 80%;
+  background: rgb(255, 255, 255);
+  font-size: 20px;
+  text-align: center;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  ;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+}
+ /* cards */
+ .cardscontainer{
+  width: 100%;
+  min-height: 100vh;
+  /* background: linear-gradient(135deg, #eeffdf, #fc5151); */
+  padding: 1px;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: -150px;
+  z-index: 0;
+}
+/* Line A */
+/* card1 */
+.cardA1{
+  width: 10%;
+  height: 10vw;
+  margin: 10vw 0 0;
+  perspective: 1000px;
+}
+.card-innerA1{
+  width: 100%;
+  height: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontA1, .backA1{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+.frontA1{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backA1{
+  background:url(../images/A1.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+/* .cardA1:hover .card-innerA1{
+  transform: rotateY(180deg);
+} */
+/* card2 */
+.cardA2{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 10vw;
+  perspective: 1000px;
+}
+.card-innerA2{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontA2, .backA2{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontA2{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backA2{
+  background:url(../images/A2.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card3 */
+.cardA3{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 20vw;
+  perspective: 1000px;
+}
+.card-innerA3{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontA3, .backA3{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontA3{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backA3{
+  background:url(../images/A3.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card4 */
+.cardA4{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 30vw;
+  perspective: 1000px;
+}
+.card-innerA4{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontA4, .backA4{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontA4{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backA4{
+  background:url(../images/A4.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card5 */
+.cardA5{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 40vw;
+  perspective: 1000px;
+}
+.card-innerA5{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontA5, .backA5{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontA5{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backA5{
+  background:url(../images/A5.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card6 */
+.cardA6{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 50vw;
+  perspective: 1000px;
+}
+.card-innerA6{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontA6, .backA6{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontA6{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backA6{
+  background:url(../images/A6.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card7 */
+.cardA7{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 60vw;
+  perspective: 1000px;
+}
+.card-innerA7{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontA7, .backA7{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontA7{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backA7{
+  background:url(../images/A7.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card8 */
+.cardA8{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 70vw;
+  perspective: 1000px;
+}
+.card-innerA8{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontA8, .backA8{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontA8{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backA8{
+  background:url(../images/A8.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card9 */
+.cardA9{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 80vw;
+  perspective: 1000px;
+}
+.card-innerA9{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontA9, .backA9{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontA9{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backA9{
+  background:url(../images/A9.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card10 */
+.cardA10{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 90vw;
+  perspective: 1000px;
+}
+.card-innerA10{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontA10, .backA10{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontA10{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backA10{
+  background:url(../images/A10.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+
+/* Line B */
+/* card1 */
+.cardB1{
+  width: 10%;
+  height: 10vw;
+  margin: 10vw 0 0;
+  perspective: 1000px;
+}
+.card-innerB1{
+  width: 100%;
+  height: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontB1, .backB1{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+.frontB1{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backB1{
+  background:url(../images/B1.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card2 */
+.cardB2{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 10vw;
+  perspective: 1000px;
+}
+.card-innerB2{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontB2, .backB2{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontB2{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backB2{
+  background:url(../images/B2.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card3 */
+.cardB3{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 20vw;
+  perspective: 1000px;
+}
+.card-innerB3{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontB3, .backB3{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontB3{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backB3{
+  background:url(../images/B3.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card4 */
+.cardB4{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 30vw;
+  perspective: 1000px;
+}
+.card-innerB4{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontB4, .backB4{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontB4{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backB4{
+  background:url(../images/B4.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card5 */
+.cardB5{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 40vw;
+  perspective: 1000px;
+}
+.card-innerB5{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontB5, .backB5{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontB5{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backB5{
+  background:url(../images/B5.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card6 */
+.cardB6{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 50vw;
+  perspective: 1000px;
+}
+.card-innerB6{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontB6, .backB6{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontB6{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backB6{
+  background:url(../images/B6.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card7 */
+.cardB7{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 60vw;
+  perspective: 1000px;
+}
+.card-innerB7{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontB7, .backB7{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontB7{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backB7{
+  background:url(../images/B7.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card8 */
+.cardB8{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 70vw;
+  perspective: 1000px;
+}
+.card-innerB8{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontB8, .backB8{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontB8{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backB8{
+  background:url(../images/B8.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card9 */
+.cardB9{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 80vw;
+  perspective: 1000px;
+}
+.card-innerB9{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontB9, .backB9{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontB9{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backB9{
+  background:url(../images/B9.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card10 */
+.cardB10{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 90vw;
+  perspective: 1000px;
+}
+.card-innerB10{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontB10, .backB10{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontB10{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backB10{
+  background:url(../images/B10.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+
+/* Line C */
+/* card1 */
+.cardC1{
+  width: 10%;
+  height: 10vw;
+  margin: 10vw 0 0;
+  perspective: 1000px;
+}
+.card-innerC1{
+  width: 100%;
+  height: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontC1, .backC1{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+.frontC1{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backC1{
+  background:url(../images/C1.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card2 */
+.cardC2{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 10vw;
+  perspective: 1000px;
+}
+.card-innerC2{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontC2, .backC2{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontC2{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backC2{
+  background:url(../images/C2.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card3 */
+.cardC3{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 20vw;
+  perspective: 1000px;
+}
+.card-innerC3{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontC3, .backC3{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontC3{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backC3{
+  background:url(../images/C3.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card4 */
+.cardC4{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 30vw;
+  perspective: 1000px;
+}
+.card-innerC4{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontC4, .backC4{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontC4{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backC4{
+  background:url(../images/C4.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card5 */
+.cardC5{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 40vw;
+  perspective: 1000px;
+}
+.card-innerC5{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontC5, .backC5{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontC5{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backC5{
+  background:url(../images/C5.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card6 */
+.cardC6{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 50vw;
+  perspective: 1000px;
+}
+.card-innerC6{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontC6, .backC6{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontC6{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backC6{
+  background:url(../images/C6.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card7 */
+.cardC7{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 60vw;
+  perspective: 1000px;
+}
+.card-innerC7{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontC7, .backC7{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontC7{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backC7{
+  background:url(../images/C7.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card8 */
+.cardC8{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 70vw;
+  perspective: 1000px;
+}
+.card-innerC8{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontC8, .backC8{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontC8{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backC8{
+  background:url(../images/C8.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card9 */
+.cardC9{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 80vw;
+  perspective: 1000px;
+}
+.card-innerC9{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontC9, .backC9{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontC9{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backC9{
+  background:url(../images/C9.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card10 */
+.cardC10{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 90vw;
+  perspective: 1000px;
+}
+.card-innerC10{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontC10, .backC10{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontC10{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backC10{
+  background:url(../images/C10.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+
+/* Line D */
+/* card1 */
+.cardD1{
+  width: 10%;
+  height: 10vw;
+  margin: 10vw 0 0;
+  perspective: 1000px;
+}
+.card-innerD1{
+  width: 100%;
+  height: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontD1, .backD1{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+.frontD1{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backD1{
+  background:url(../images/D1.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card2 */
+.cardD2{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 10vw;
+  perspective: 1000px;
+}
+.card-innerD2{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontD2, .backD2{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontD2{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backD2{
+  background:url(../images/D2.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card3 */
+.cardD3{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 20vw;
+  perspective: 1000px;
+}
+.card-innerD3{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontD3, .backD3{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontD3{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backD3{
+  background:url(../images/D3.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card4 */
+.cardD4{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 30vw;
+  perspective: 1000px;
+}
+.card-innerD4{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontD4, .backD4{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontD4{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backD4{
+  background:url(../images/D4.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card5 */
+.cardD5{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 40vw;
+  perspective: 1000px;
+}
+.card-innerD5{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontD5, .backD5{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontD5{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backD5{
+  background:url(../images/D5.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card6 */
+.cardD6{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 50vw;
+  perspective: 1000px;
+}
+.card-innerD6{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontD6, .backD6{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontD6{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backD6{
+  background:url(../images/D6.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card7 */
+.cardD7{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 60vw;
+  perspective: 1000px;
+}
+.card-innerD7{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontD7, .backD7{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontD7{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backD7{
+  background:url(../images/D7.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card8 */
+.cardD8{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 70vw;
+  perspective: 1000px;
+}
+.card-innerD8{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontD8, .backD8{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontD8{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backD8{
+  background:url(../images/D8.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card9 */
+.cardD9{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 80vw;
+  perspective: 1000px;
+}
+.card-innerD9{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontD9, .backD9{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontD9{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backD9{
+  background:url(../images/D9.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card10 */
+.cardD10{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 90vw;
+  perspective: 1000px;
+}
+.card-innerD10{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontD10, .backD10{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontD10{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backD10{
+  background:url(../images/D10.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+
+/* Line E */
+/* card1 */
+.cardE1{
+  width: 10%;
+  height: 10vw;
+  margin: 10vw 0 0;
+  perspective: 1000px;
+}
+.card-innerE1{
+  width: 100%;
+  height: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontE1, .backE1{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+.frontE1{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backE1{
+  background:url(../images/E1.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card2 */
+.cardE2{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 10vw;
+  perspective: 1000px;
+}
+.card-innerE2{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontE2, .backE2{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontE2{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backE2{
+  background:url(../images/E2.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card3 */
+.cardE3{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 20vw;
+  perspective: 1000px;
+}
+.card-innerE3{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontE3, .backE3{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontE3{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backE3{
+  background:url(../images/E3.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card4 */
+.cardE4{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 30vw;
+  perspective: 1000px;
+}
+.card-innerE4{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontE4, .backE4{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontE4{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backE4{
+  background:url(../images/E4.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card5 */
+.cardE5{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 40vw;
+  perspective: 1000px;
+}
+.card-innerE5{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontE5, .backE5{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontE5{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backE5{
+  background:url(../images/E5.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card6 */
+.cardE6{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 50vw;
+  perspective: 1000px;
+}
+.card-innerE6{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontE6, .backE6{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontE6{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backE6{
+  background:url(../images/E6.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card7 */
+.cardE7{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 60vw;
+  perspective: 1000px;
+}
+.card-innerE7{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontE7, .backE7{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontE7{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backE7{
+  background:url(../images/E7.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card8 */
+.cardE8{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 70vw;
+  perspective: 1000px;
+}
+.card-innerE8{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontE8, .backE8{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontE8{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backE8{
+  background:url(../images/E8.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card9 */
+.cardE9{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 80vw;
+  perspective: 1000px;
+}
+.card-innerE9{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontE9, .backE9{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontE9{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backE9{
+  background:url(../images/E9.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* card10 */
+.cardE10{
+  width: 10%;
+  height: 10vw;
+  margin: -10vw 90vw;
+  perspective: 1000px;
+}
+.card-innerE10{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.frontE10, .backE10{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;}
+.frontE10{
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+}
+.backE10{
+  background:url(../images/E10.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
