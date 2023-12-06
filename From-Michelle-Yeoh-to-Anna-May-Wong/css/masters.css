@@ -58,6 +58,7 @@ p{
 .mycontainer {
   width: 100%;
   margin: 5% auto;
+  background-color: #FAF6F0;
 }
 .section2{
   margin-top: 150px;
@@ -86,18 +87,19 @@ span.green{
   top: 0px;
   z-index: 0;
   padding-top: 10%;
+  background-color: #FAF6F0;
   
 }
 
 .red{
-  background-color: rgb(255, 255, 255);
+  background-color: #FAF6F0;
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0px;
   opacity: 100%;
 }
 .blue{
-  background-color: rgb(255, 255, 255);
+  background-color: #FAF6F0;
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0px;
@@ -105,7 +107,7 @@ span.green{
   /* z-index: 5; */
 }
 .green{
-  background-color: rgb(255, 255, 255);
+  background-color: #FAF6F0;
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0px;
@@ -230,7 +232,7 @@ span.green{
   backface-visibility: hidden;
 }
 .frontA1{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -263,7 +265,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontA2{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -294,7 +296,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontA3{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -325,7 +327,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontA4{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -356,7 +358,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontA5{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -387,7 +389,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontA6{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -418,7 +420,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontA7{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -449,7 +451,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontA8{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -480,7 +482,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontA9{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -511,7 +513,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontA10{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -521,7 +523,6 @@ span.green{
   background-position: center;
   transform: rotateY(180deg);
 }
-
 
 /* Line B */
 /* card1 */
@@ -546,7 +547,7 @@ span.green{
   backface-visibility: hidden;
 }
 .frontB1{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -577,7 +578,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontB2{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -608,7 +609,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontB3{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -639,7 +640,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontB4{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -670,7 +671,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontB5{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -701,7 +702,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontB6{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -732,7 +733,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontB7{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -763,7 +764,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontB8{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -794,7 +795,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontB9{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -825,7 +826,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontB10{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -835,7 +836,6 @@ span.green{
   background-position: center;
   transform: rotateY(180deg);
 }
-
 
 /* Line C */
 /* card1 */
@@ -860,7 +860,7 @@ span.green{
   backface-visibility: hidden;
 }
 .frontC1{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -891,7 +891,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontC2{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -922,7 +922,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontC3{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -953,7 +953,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontC4{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -984,7 +984,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontC5{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -1015,7 +1015,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontC6{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -1046,7 +1046,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontC7{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -1077,7 +1077,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontC8{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -1108,7 +1108,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontC9{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -1139,7 +1139,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontC10{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -1149,7 +1149,6 @@ span.green{
   background-position: center;
   transform: rotateY(180deg);
 }
-
 
 /* Line D */
 /* card1 */
@@ -1174,7 +1173,7 @@ span.green{
   backface-visibility: hidden;
 }
 .frontD1{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -1205,7 +1204,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontD2{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -1236,7 +1235,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontD3{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -1267,7 +1266,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontD4{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -1298,7 +1297,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontD5{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -1329,7 +1328,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontD6{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -1360,7 +1359,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontD7{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -1391,7 +1390,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontD8{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -1422,7 +1421,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontD9{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -1453,7 +1452,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontD10{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -1463,7 +1462,6 @@ span.green{
   background-position: center;
   transform: rotateY(180deg);
 }
-
 
 /* Line E */
 /* card1 */
@@ -1488,7 +1486,7 @@ span.green{
   backface-visibility: hidden;
 }
 .frontE1{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -1519,7 +1517,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontE2{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -1550,7 +1548,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontE3{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -1581,7 +1579,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontE4{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -1612,7 +1610,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontE5{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -1643,7 +1641,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontE6{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -1674,7 +1672,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontE7{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -1705,7 +1703,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontE8{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -1736,7 +1734,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontE9{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -1767,7 +1765,7 @@ span.green{
   position: absolute;
   backface-visibility: hidden;}
 .frontE10{
-  background:#fff;
+  background:#FAF6F0;
   background-size: cover;
   background-position: center;
 }
@@ -1777,3 +1775,4 @@ span.green{
   background-position: center;
   transform: rotateY(180deg);
 }
+
