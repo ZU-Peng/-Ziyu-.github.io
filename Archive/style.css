@@ -1,0 +1,365 @@
+:root {
+    --sidebar-bg: #163C53;
+    --sidebar-hover-bg: #575757;
+    --text-color: white;
+    --feedback-bg: #DFDCD9;
+    --visualization-ski-area-bg: #F9DD2E;
+    --visualization-trails-terrain-bg: #E17808;
+    --visualization-average-snowfall-bg: #163C53; 
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--sidebar-bg);
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar a, .sidebar .feedback-link a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: calc(22px * 0.65);
+    color: var(--text-color);
+    font-family: 'Nunito', sans-serif;
+}
+
+.sidebar a:hover {
+    background-color: var(--sidebar-hover-bg);
+}
+
+.sidebar .feedback-link {
+    margin-top: auto;
+    padding-bottom: 20px;
+    margin-top: 280%;
+}
+
+.title-container {
+    position: absolute;
+    width: 100%;
+    top: 23%;
+    left: -13%;
+    font-family: 'PT Serif', serif;
+    font-size: 8em; 
+    font-weight: bold;
+    color: white; 
+    text-align: center;
+}
+
+.ikon {
+    color: #F9DD2E;
+}
+
+.or {
+    color: #163C53;
+}
+
+.epic {
+    color: #E17808;
+}
+
+.neversion {
+    position: absolute;
+    width: 100%;
+    top: 40%; 
+    left: 18%; 
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5em; 
+    font-weight: bold;
+    color: white;
+    text-align: center;
+
+}
+
+.newengland-version {
+    color: #163C53;
+}
+
+.ikoncard {
+    position: absolute;
+    top: 23%;
+    left: 3%;
+    width: 120px;
+    height: 170px;
+}
+
+.epiccard {
+    position: absolute;
+    top: 24.5%;
+    left: 62%;
+    width: 150px;
+    height: 150px;
+}
+.youdecide {
+    position: absolute;
+    width: 100%;
+    top: 50%; 
+    left: 10%; 
+    font-family: 'Nunito', sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    }
+
+.udecide {
+    color: #F9DD2E;
+
+    }
+.info-box {
+    background-color: #163C53; 
+    top: 22%;
+    left: -20.5%;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px; 
+    color: rgb(255, 255, 255); 
+    text-align: left; 
+    font-family: 'Nunito', sans-serif; 
+    font-size: 1.1em; 
+}
+
+.info-box {
+    position: relative; 
+    z-index: 10; 
+    
+}
+
+#ski-area-comparison {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, 1fr); 
+    height: 75vh;
+    align-items: center; 
+    justify-content: left; 
+    text-align: left;
+    font-family: 'Nunito', sans-serif;
+}
+
+.ski-area-subtitle {
+    text-align: center;
+    font-size: 3em;
+    font-family: 'PT Serif', serif;
+}
+
+
+#visualization-ski-area .chart-title {
+    text-align: center;
+    font-size: 24px; 
+    margin-top: -20px; 
+    font-weight: bold; 
+}
+
+.chart-note {
+    text-align: center;
+    font-size: 18px; 
+    font-weight: bold; 
+    font-family: 'PT Serif', serif; 
+    margin-top: 20px; 
+}
+
+
+
+#average-snowfall-comparison {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, 1fr); 
+    height: 75vh;
+    align-items: center; 
+    justify-content: left; 
+    text-align: left;
+    font-family: 'Nunito', sans-serif;
+}
+
+.snowfall-subtitle {
+    text-align: center;
+    font-size: 3em;
+    font-family: 'PT Serif', serif;
+}
+
+#trails-terrain-comparison {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto; 
+    height: auto;
+    align-items: start; 
+    justify-content: left;
+    text-align: left;
+    font-family: 'Nunito', sans-serif;
+    gap: 20px; 
+}
+
+.grid-center {
+    grid-column: 1 / -1; 
+    display: grid;
+    grid-template-rows: auto 1fr; 
+    gap: 20px; 
+}
+
+.trails-and-terrain-subtitle {
+    text-align: center;
+    font-size: 3em;
+    font-family: 'PT Serif', serif;
+}
+
+.diamond-image {
+    width: 100%; 
+    height: auto; 
+    justify-self: center; 
+}
+
+
+
+
+.grid-center {
+    grid-column: 2; 
+    grid-row: 2;
+}
+
+
+
+
+.skiarea, .avgsnow, .tandt {
+    color: #F9DD2E;
+}
+
+
+.content, .grid-item, form {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    margin-left: 200px;
+}
+
+.grid-item {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: black; 
+    font-family: 'PT Serif', serif;
+}
+
+.video-background {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#visualization-ski-area { background-color: var(--visualization-ski-area-bg); }
+
+#visualization-average-snowfall { 
+    background-color: var(--visualization-average-snowfall-bg); 
+    color: var(--text-color);
+}
+
+#visualization-trails-terrain { background-color: var(--visualization-trails-terrain-bg); }
+
+#feedback { 
+    background-color: var(--feedback-bg);
+    align-items: center; 
+}
+
+input, textarea, button {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.skiResortSlice {
+    fill-opacity: 0.7;
+    transition: transform 0.2s;
+}
+.skiResortSlice:hover {
+    fill-opacity: 1;
+}
+.skiResortTooltip {
+    position: absolute;
+    text-align: center;
+    width: 120px;
+    height: auto;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.snowfall-bar:hover {
+    opacity: 0.5;
+}
+.snowfall-ikon {
+    fill: lightyellow;
+}
+.snowfall-epic {
+    fill: orange;
+}
+.snowfall-tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 4px;
+    font: 12px sans-serif;
+    background: white;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+}
+.legend {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    margin-top: 10px;
+}
+.legend rect {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+}
+.legend text {
+    font-size: 12px;
+}
+.barchart-title{
+    text-align: center;
+    font-size: 24px; 
+    margin-top: -20px; 
+    font-weight: bold; 
+
+}
+.piechart-title{
+text-align: center;
+    font-size: 24px;  
+    font-weight: bold; 
+}

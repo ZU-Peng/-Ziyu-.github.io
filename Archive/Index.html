@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikon or Epic</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+    </style>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 10px;">
+        <small>made by Paul Lyu</small>
+    </div>
+<div class="sidebar">
+    <a href="#visualization-ski-area">Ski Area</a>
+    <a href="#visualization-average-snowfall">Average Snowfall</a>
+    <a href="#visualization-trails-terrain">Trails and Terrain</a>
+    <div class="feedback-link">
+        <a href="#feedback">Feedback</a>
+    </div>
+</div>
+
+<div class="content">
+    <section id="home" class="grid-item video-background">
+        <div class="video-container">
+            <video autoplay muted loop id="bg-video">
+                <source src="skivideo.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="title-container">
+            <span class="ikon">Ikon</span> <span class="or">or</span> <span class="epic">Epic</span>
+        </div>
+        <div class="neversion">
+            <span class="newengland-version">New England Area Version</span> 
+        </div>
+        <div class="cards">
+            <img class="ikoncard" src="ikoncard.jpg"> 
+            <img class="epiccard" src="epiccard.jpg">
+            </div>
+            <div class="youdecide">
+    <span class="udecide"> YOU DECIDE YOUR NEXT DESTINATION! </span>
+            </div>
+            <div class="info-box">  
+                The 23-24 snow season in New England is nearly over, and we hope<br>
+                you had a perfect season on the snow!<br>
+                <br>
+                But if you're still thinking about where to go next snow season, <br>
+                we've pulled the 2 most popular season pass companies and their 12 ski <br>
+                resorts in New England. Gathering data from the <span class="skiarea">SKI AREA</span>, <br>
+                the <span class="avgsnow">AVERAGE SNOWFALL</span>, and <span class="tandt">TRAILS AND TERRAIN</span>.<br> <br>
+                
+                We'll let you decide where you want to go for your 24-25 snow season!
+            </div>
+            
+
+
+        </div>
+
+        
+    </section>
+    
+    <section id="ski-area-comparison" class="grid-item">
+        <div class="grid-center">
+            <h2 class="ski-area-subtitle">First, Ski Area Matters!</h2>
+            <p>We know that the ski area is a crucial condition for every snowsports person. It gives the skier the opportunity for recreation and sport. It also includes the wider experience and benefits they offer.</p>
+            <p>For a family, a larger ski area can mean more room for their family and children to ski and avoid the risks of crowded conditions, making for a safer and more comfortable skiing experience.</p>
+            <p>For those who work, skiing on weekends or holidays may be a better option. Consider the crowds that can occur on these particular ski days. A larger ski area will allow them to find unlimited pleasure in a limited amount of time!</p>
+            <p>Next, let's take a look at the size comparison of these 12 ski resorts through our data to find the closest, largest ski resort that matches you best!</p>
+        </div>
+    </section>
+    
+    
+    
+    <section id="visualization-ski-area" class="grid-item">
+        <div class="chart-title">Ski Area Scatter Plot</div>
+        <svg width="1080" height="700"></svg>
+        <div class="chart-note">Note: All logos indicate the Pass to which the ski resort belongs, the bigger the logo the bigger the ski area!</div>
+    </section>
+    
+    
+    <script>
+         const areaChartSvg = d3.select("#visualization-ski-area svg"),
+    width = +areaChartSvg.attr("width"),
+    height = +areaChartSvg.attr("height");
+
+const margin = {top: 20, right: 50, bottom: 50, left: 60},
+    innerWidth = width - margin.left - margin.right,
+    innerHeight = height - margin.top - margin.bottom;
+
+const g = areaChartSvg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+// Rest of the code that uses `g` and transformations based on `areaChartSvg`
+
+    
+        const xScale = d3.scaleLinear().range([0, innerWidth]);
+        const yScale = d3.scaleLinear().range([innerHeight, 0]);
+        const sizeScale = d3.scaleSqrt().range([10, 65]);
+    
+        d3.csv("resorts.csv", d => {
+            d["SKI AREA (Acres)"] = +d["SKI AREA (Acres)"].replace(/,/g, '');
+            d["VERTICAL DROP (fts)"] = +d["VERTICAL DROP (fts)"].replace(/,/g, '');
+            d["STATE"] = d["STATE"];
+            return d;
+        }).then(data => {
+            xScale.domain([0, d3.max(data, d => d["SKI AREA (Acres)"])]);
+            yScale.domain([0, d3.max(data, d => d["VERTICAL DROP (fts)"])]);
+            sizeScale.domain(d3.extent(data, d => d["SKI AREA (Acres)"]));
+    
+            const xAxis = g.append("g")
+                           .attr("transform", `translate(0,${innerHeight})`)
+                           .call(d3.axisBottom(xScale));
+    
+            const yAxis = g.append("g")
+                           .call(d3.axisLeft(yScale));
+    
+        
+            areaChartSvg.append("text")
+               .attr("transform", "rotate(-90)")
+               .attr("x", 0 - (height / 2))
+               .attr("y", 15)
+               .attr("text-anchor", "middle")
+               .text("Vertical drops (in feet)");
+    
+           
+               areaChartSvg.append("text")
+               .attr("x", width - 10)
+               .attr("y", height - 10)
+               .attr("text-anchor", "end")
+               .text("Ski area (in acres)");
+    
+            data.forEach(d => {
+                const image = g.append("image")
+                    .attr("xlink:href", d["PASS"] === "IKON PASS" ? "ikonsmall.png" : "epicsmall.png")
+                    .attr("x", xScale(d["SKI AREA (Acres)"]) - sizeScale(d["SKI AREA (Acres)"]) / 2)
+                    .attr("y", yScale(d["VERTICAL DROP (fts)"]) - sizeScale(d["SKI AREA (Acres)"]) / 2)
+                    .attr("width", sizeScale(d["SKI AREA (Acres)"]))
+                    .attr("height", sizeScale(d["SKI AREA (Acres)"]))
+                    .on("mouseover", function() {
+                        let text = `${d["STATE"]}`;
+                        let textX = xScale(d["SKI AREA (Acres)"]);
+                        let textY = yScale(d["VERTICAL DROP (fts)"]) - sizeScale(d["SKI AREA (Acres)"]) / 2 - 10;
+                        let textSize = text.length * 8 + 20;  
+    
+                        // Adjust for edges
+                        textX = Math.min(Math.max(textSize / 2, textX), innerWidth - textSize / 2);
+                        textY = Math.max(20, textY);  // Adjust y position to prevent cutoff
+    
+                        // Create rectangle background first
+                        g.append("rect")
+                            .attr("x", textX - textSize / 2)
+                            .attr("y", textY - 20)
+                            .attr("width", textSize)
+                            .attr("height", 24)  
+                            .attr("fill", "gray")
+                            .attr("opacity", 0.8)
+                            .attr("class", "tooltip");
+    
+                        
+                        g.append("text")
+                            .attr("x", textX)
+                            .attr("y", textY - 2)
+                            .attr("text-anchor", "middle")
+                            .attr("fill", "white")
+                            .attr("class", "tooltip")
+                            .text(text);
+                    })
+                    .on("mouseout", function() {
+                        d3.selectAll(".tooltip").remove();
+                    });
+            });
+        });
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    <section id="average-snowfall-comparison" class="grid-item">
+        <div class="grid-center">
+            <h2 class="snowfall-subtitle">Second, we also love Snowfall!</h2>
+            <p>Whether you are a beginner or an expert skier, snowfall has become one of the most awaited events for every skier/snowboarder. Of course, it has also become an important criterion to consider the ski resorts.</p>
+            <p>The amount of snowfall has a direct impact on the quality and quantity of snow on the slopes. Sufficient fresh snow provides a better skiing/snowboarding experience and makes sports such as skiing and snowboarding smoother and more enjoyable. Fresh snow is often considered softer and relatively safe to fall on.</p>
+            <p>Also, abundant snowfall helps maintain piste conditions and reduces ice and exposed rocks, which can cause injury to skiers/snowboarders.</p>
+            <p>Of course, most importantly, in years with more snowfall, the ski season can start earlier and end later for a longer duration. For skiers/snowboarders, it's certainly the most enjoyable!</p>
+        </div>
+    </section>
+    
+    <section id="visualization-average-snowfall" class="grid-item">
+        <div class="barchart-title">Average Snawfall Bar Chart</div>
+        <div id="snowfallChart"></div>
+        <div class="chart-note">Bars represent average annual snowfall per resort, Taller bars indicate more snowfall!</div>
+        <script>
+            const snowfallResortsData = [ 
+            { name: 'Stratton', averageSnowfall: 74.66, pass: 'IKON PASS' },
+  { name: 'Sunday River', averageSnowfall: 103, pass: 'IKON PASS' },
+  { name: 'Loon Mountain', averageSnowfall: 105.66, pass: 'IKON PASS' },
+  { name: 'Pico', averageSnowfall: 107.33, pass: 'IKON PASS' },
+  { name: 'Sugarloaf', averageSnowfall: 125.66, pass: 'IKON PASS' },
+  { name: 'Killington', averageSnowfall: 164, pass: 'IKON PASS' },
+  { name: 'Sugarbush', averageSnowfall: 176.33, pass: 'IKON PASS' },
+  { name: 'Crotched Mountain', averageSnowfall: 70.66, pass: 'EPIC PASS' },
+  { name: 'Mount Sunapee', averageSnowfall: 75.66, pass: 'EPIC PASS' },
+  { name: 'Attitash Mountain', averageSnowfall: 84, pass: 'EPIC PASS' },
+  { name: 'Mount Snow', averageSnowfall: 108.66, pass: 'EPIC PASS' },
+  { name: 'Okemo', averageSnowfall: 118, pass: 'EPIC PASS' },
+  { name: 'Wildcat Mountain', averageSnowfall: 140.33, pass: 'EPIC PASS' },
+  { name: 'Stowe', averageSnowfall: 201.33, pass: 'EPIC PASS' } ];
+
+  const snowfallMargin = {top: 40, right: 20, bottom: 100, left: 40},
+      snowfallWidth = 960 - snowfallMargin.left - snowfallMargin.right,
+      snowfallHeight = 500 - snowfallMargin.top - snowfallMargin.bottom;
+const snowfallX = d3.scaleBand().rangeRound([0, snowfallWidth]).padding(0.1),
+      snowfallY = d3.scaleLinear().range([snowfallHeight, 0]);
+
+const snowfallSvg = d3.select("#snowfallChart").append("svg")
+      .attr("width", snowfallWidth + snowfallMargin.left + snowfallMargin.right)
+      .attr("height", snowfallHeight + snowfallMargin.top + snowfallMargin.bottom)
+      .append("g")
+      .attr("transform", "translate(" + snowfallMargin.left + "," + snowfallMargin.top + ")");
+
+snowfallX.domain(snowfallResortsData.map(d => d.name));
+snowfallY.domain([0, d3.max(snowfallResortsData, d => d.averageSnowfall)]);
+
+snowfallSvg.selectAll(".snowfall-bar")
+    .data(snowfallResortsData)
+    .enter().append("rect")
+    .attr("class", d => d.pass === 'IKON PASS' ? "snowfall-bar snowfall-ikon" : "snowfall-bar snowfall-epic")
+    .attr("x", d => snowfallX(d.name))
+    .attr("width", snowfallX.bandwidth())
+    .attr("y", d => snowfallY(d.averageSnowfall))
+    .attr("height", d => snowfallHeight - snowfallY(d.averageSnowfall));
+
+snowfallSvg.append("g")
+    .attr("transform", "translate(0," + snowfallHeight + ")")
+    .call(d3.axisBottom(snowfallX))
+    .selectAll("text")
+    .style("text-anchor", "end")
+    .attr("dx", "-.8em")
+    .attr("dy", ".15em")
+    .attr("transform", "rotate(-65)");
+
+snowfallSvg.append("g")
+    .call(d3.axisLeft(snowfallY));
+
+const snowfallTooltip = d3.select("body").append("div").attr("class", "snowfall-tooltip");
+
+snowfallSvg.selectAll(".snowfall-bar")
+    .on("mouseover", function(event, d) {
+        snowfallTooltip.transition().duration(200).style("opacity", .9);
+        snowfallTooltip.html(d.name + "<br/>" + d.averageSnowfall + " inches")
+            .style("left", (event.pageX) + "px")
+            .style("top", (event.pageY - 28) + "px");
+    })
+    .on("mouseout", function(d) {
+        snowfallTooltip.transition().duration(500).style("opacity", 0);
+    });
+    const legend = snowfallSvg.append("g")
+        .attr("transform", `translate(${(snowfallWidth - 200) / 2}, ${snowfallHeight + 84})`); // Moved down from 40 to 70
+
+    legend.selectAll(null)
+        .data([{ color: "lightyellow", pass: "IKON PASS" }, { color: "orange", pass: "EPIC PASS" }])
+        .enter().append("rect")
+        .attr("x", (d, i) => i * 120)
+        .attr("width", 18)
+        .attr("height", 18)
+        .style("fill", (d) => d.color);
+
+    legend.selectAll(null)
+        .data([{ color: "lightyellow", pass: "IKON PASS" }, { color: "orange", pass: "EPIC PASS" }])
+        .enter().append("text")
+        .attr("x", (d, i) => i * 120 + 24)
+        .attr("y", 14)
+        .text((d) => d.pass);
+</script>
+    </section>
+
+
+    <section id="trails-terrain-comparison" class="grid-item">
+        <div class="grid-center">
+            <h2 class="trails-and-terrain-subtitle">Lastly, You Pick Your Route!</h2>
+            <p>As we know, there are no two snowflakes in the world that are the same, and there are no two snow parks in the world with the same trails and terrain. Therefore, choosing a ski resort according to one's skills and needs becomes a big challenge for every skier.</p>
+            <p>Skiers/Snowboarders' skill levels vary from beginners to experts. Ski resorts usually offer trails with different levels of difficulty, such as Green Circle (Easiest), Blue Circle (More Difficult), and Black Diamond (Most Difficult), as well as specialized areas for extreme skiing. Such grading ensures that everyone can find the right trail for their level, be safe and enjoy their skiing.</p>
+            <p>Also, diverse terrain and trails of varying difficulty help skiers/snowboarders gradually improve their skills. Additional terrain such as canyons, wooded areas, and natural jumps provide them with additional challenges and adventure, which can greatly increase the fun and excitement of skiing.</p>
+            <p>In conclusion, the different trails and terrain in the snow parks means for the skiers to be able to choose the path that suits their skill level to enjoy skiing. This factor is crucial to both skier satisfaction and the attractiveness of the snow park.</p>
+            <img src="diamond.jpg" alt="Diamond" class="diamond-image">
+        </div>
+    </section>
+    
+    <section id="visualization-trails-terrain" class="grid-item">
+        <div class="piechart-title">Trail Difficulty Composition Pie Chart</div>
+        <div id="skiResortChart"></div>
+        <div class="skiResortTooltip"></div>
+        <div class="chart-note">Each slice indicates the proportion of beginner, intermediate, and expert trails under Epic and Ikon passes!</div>
+        <script>
+            const data = [
+                {
+                    pass: "Epic",
+                    levels: [
+                        { level: "Beginner", proportion: 0.2357, pass: "Epic" },
+                        { level: "Intermediate", proportion: 0.4829, pass: "Epic" },
+                        { level: "Expert", proportion: 0.2814, pass: "Epic" }
+                    ]
+                },
+                {
+                    pass: "Ikon",
+                    levels: [
+                        { level: "Beginner", proportion: 0.2614, pass: "Ikon" },
+                        { level: "Intermediate", proportion: 0.4057, pass: "Ikon" },
+                        { level: "Expert", proportion: 0.3329, pass: "Ikon" }
+                    ]
+                }
+            ];
+
+            const chartWidth = 1600, chartHeight = 800, chartRadius = Math.min(chartWidth, chartHeight) / 4;
+            const color = d3.scaleOrdinal().domain(["Beginner", "Intermediate", "Expert"]).range(["green", "blue", "black"]);
+            const arc = d3.arc()
+    .innerRadius(chartRadius * 0.6)
+    .outerRadius(chartRadius);
+            const pie = d3.pie().value(d => d.proportion).sort(null);
+            const skiResortSvg = d3.select("#skiResortChart").append("svg")
+    .attr("width", chartWidth)
+    .attr("height", chartHeight)
+    .append("g")
+    .attr("transform", `translate(${chartWidth / 2}, ${chartHeight / 2})`);
+
+
+
+            const tooltip = d3.select(".skiResortTooltip");
+
+            data.forEach((d, i) => {
+                const g = skiResortSvg.append("g").attr("transform", `translate(${(i * 2.5 - 1) * chartRadius}, 0)`);
+                g.selectAll(".skiResortSlice")
+                    .data(pie(d.levels))
+                    .enter().append("path")
+                    .attr("class", d => "skiResortSlice " + d.data.level.replace(/ /g, ""))
+                    .attr("d", arc)
+                    .attr("fill", d => color(d.data.level))
+                    .on("mouseover", function(event, d) {
+                        tooltip.html(`${d.data.level}: ${(d.data.proportion * 100).toFixed(2)}%`)
+                               .style("opacity", 1)
+                               .style("left", (event.pageX + 10) + "px")
+                               .style("top", (event.pageY - 28) + "px");
+                    })
+                    .on("mouseout", function() {
+                        tooltip.style("opacity", 0);
+                    });
+
+                g.append("text")
+                    .attr("text-anchor", "middle")
+                    .attr("y", chartRadius+ 40)
+                    .style("font-size", "16px")
+                    .style("font-weight", "bold")
+                    .text(d.pass);
+            });
+        </script>
+    </section>
+    <section id="feedback" class="grid-item">
+        Feedback
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="comments" placeholder="Your Comments" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</div>
+
+</body>
+</html>
